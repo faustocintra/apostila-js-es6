@@ -11,7 +11,7 @@ let x
 var preco
 const meuNome = 'Fausto'
 ```
-**NOTE BEM**: para declarar uma variável em JS, basta uma das palavras-chave reservadas para esse fim e o nome da variável, nada mais.
+> **NOTE BEM**: para declarar uma variável em JS, basta uma das palavras-chave reservadas (**`let`** ou **`var`**) para esse fim e o nome da variável, nada mais. **`const`** exige também que um valor seja atribuído à variável no momento da declaração.
 
 Há três palavras-chave utilizadas para declarar variáveis em JavaScript:
 
@@ -38,4 +38,37 @@ Apesar de as especificações da linguagem JS assim permitirem, não é recomend
 
 | IMPORTANTE |
 |------------|
-| O exemplo abaixo contém comentários iniciados com `//`, chamados **comentários de linha**. Esta é uma das formas de se fazer comentários em JS. |
+| O exemplo abaixo contém comentários iniciados com `//`, chamados **comentários de linha**. Esta é uma das formas de se fazer comentários em JS.
+
+```js
+let x       // OK!
+let primeiroNome    // OK!
+let 1nome   // INVÁLIDO: começa com um dígito
+let $valor  // OK, mas pouco usual
+let _num    // OK, mas pouco usual
+let %resultado  // Caractere inicial INVÁLIDO
+let área    // OK, mas acentos não são recomendados
+```
+
+### Convenções de nomeação de variáveis
+
+Quando muitos desenvolvedores trabalham num mesmo projeto, é comum que surja, mais cedo ou mais tarde, alguma discórdia sobre a forma de nomear as variáveis.
+
+Por isso, as comunidades de cada linguagem acabam adotando convenções, que não são regras definidas na própria linguagem, mas sim uma espécie de "combinado" entre os membros.
+
+A convenção mais comum entre os desenvolvedores JS é a seguinte:
+
+1. **Sempre** iniciar o nome das variáveis com uma letra **minúscula**;
+2. Se o nome da variável for composto por mais de uma palavra, é utilizada **inicial maiúscula a partir da segunda** palavra.
+
+Observe os exemplos a seguir:
+
+```js
+    // Uma palavra, inicial minúscula
+    let area
+    // Duas palavras, a segunda com inicial maiúscula
+    let areaTerreno
+    // Três palavras, iniciais maúsculas a partir da segunda
+    let areaTerrenoPadrao
+```
+> **CURIOSIDADE**: esse tipo de convenção é chamado, em inglês, de *camel case* (*camel* significa "camelo"). O motivo é que as letras maúsculas no meio do nome das variáveis acabam se parecendo com as corcovas de um camelo.
