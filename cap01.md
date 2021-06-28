@@ -32,6 +32,8 @@ let nome, email, telefone, celular
 
 Em JS, nomes de variáveis devem começar com uma letra; os caracteres `$` e `_` também são aceitos na posição inicial. Dígitos (`0` a `9`) podem ser utilizados, mas não no início.
 
+Você também não pode usar para nomear variáveis nenhuma das [palavras reservadas](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#palavras-chave) pelo JS para o seu próprio uso.
+
 É importante frisar que JS é uma **linguagem sensível a caixa alta e caixa baixa** (*case sensitive*, em inglês), isto é, ela trata letras maiúsculas e minúsculas como coisas diferentes. Assim, uma variável de nome `num` é diferente de outra variável de nome `NUM`, e ambas são diferentes de uma terceira variável nomeada como `Num`.
 
 Apesar de as especificações da linguagem JS assim permitirem, não é recomendável declarar variáveis que contenham caracteres acentuados.
