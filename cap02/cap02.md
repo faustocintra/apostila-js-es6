@@ -6,7 +6,7 @@ Javascript é uma linguagem de tipagem dinâmica. Isso significa que os tipos de
 
 Veja alguns exemplos de declarações de variáveis em JS:
 
-```js
+```{.js .number-lines}
 let x
 var preco
 const meuNome = 'Fausto'
@@ -23,7 +23,7 @@ Há três palavras-chave utilizadas para declarar variáveis em JavaScript:
 
 Várias variáveis podem ser declaradas simultaneamente:
 
-```js
+```{.js .number-lines}
 let quantidade, precoUnitario, precoTotal
 let nome, email, telefone, celular
 ```
@@ -42,7 +42,7 @@ Apesar de as especificações da linguagem JS assim permitirem, não é recomend
 |------------|
 | O exemplo abaixo contém comentários iniciados com `//`, chamados **comentários de linha**. Esta é uma das formas de se fazer comentários em JS.
 
-```js
+```{.js .number-lines}
 let x       // OK!
 let primeiroNome    // OK!
 let 1nome   // INVÁLIDO: começa com um dígito
@@ -65,7 +65,7 @@ A convenção mais comum entre os desenvolvedores JS é a seguinte:
 
 Observe os exemplos a seguir:
 
-```js
+```{.js .number-lines}
     // Uma palavra, inicial minúscula
     let area
     // Duas palavras, a segunda com inicial maiúscula
