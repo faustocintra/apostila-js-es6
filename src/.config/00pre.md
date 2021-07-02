@@ -20,13 +20,21 @@ listingTitle: Listagem
 lstPrefix: Listagem
 urlcolor: RedOrange
 papersize: a4
-linestretch: 1.25
+linestretch: 1.2
 lang: pt-BR
 documentclass: report
 geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
-mainfont: QT Optimum
+mainfont: IBM Plex Sans
 monofont: IBM Plex Mono
 fontsize: 12pt
+header-includes: |
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhead[L]{APOSTILA JS (ES6+)}
+    \fancyhead[C]{Prof. Fausto G. Cintra}
+    \fancyhead[R]{\thepage}
+    \fancyfoot[L,C,R]{}
+    \renewcommand{\footrulewidth}{0.4pt}
 ---
 
 \maketitle

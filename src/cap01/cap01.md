@@ -1,5 +1,46 @@
 # COMEÇANDO COM JAVASCRIPT
 
+## Uma breve história do JavaScript (sim, é importante!)
+
+Em 1989, [Tim Berners-Lee](https://pt.wikipedia.org/wiki/Tim_Berners-Lee) inventou a linguagem HTML e, com ela, a possibilidade de criar páginas Web. Isso revoluciou a Internet da época, que, até então, era acessada principalmente por terminais de texto, com suporte muito limitado a imagens e outros tipos de mídia. Essa "nova" internet passou a ser conhecida pela sigla WWW (de *World Wide Web*, Teia de Alcance Mundial).
+
+As páginas Web de Berners-Lee fizeram muito sucesso. Mas elas tinham uma limitação: apenas entregavam conteúdo multimídia, de forma estática, como a televisão. Não havia forma de o usuário interagir com esse conteúdo, nem de enviar informações de volta à origem. E isso restringia as possibilidades de uso das páginas Web.
+
+Em 1994, o [Netscape Navigator](https://pt.wikipedia.org/wiki/Netscape_Navigator) era o navegador Web líder de mercado. Para resolver o problema da falta de interatividade, a empresa Netscape decidiu por introduzir uma linguagem de programação que pudesse ser incorporada às páginas Web e executada pelo navegador ao carregá-las.
+
+A linguagem em questão, depois de muitos nomes provisórios, ganhou o nome de JavaScript, tendo sido lançada em 1995. Foi desenvolvida originalmente por [Brendan Eich](https://pt.wikipedia.org/wiki/Brendan_Eich), que, nos dias de hoje, é o nome por trás do navegador [Brave](https://brave.com), focado em privacidade e eliminação de propagandas indesejadas.
+
+A escolha pelo nome JavaScript não foi por acaso, tratando-se, na verdade, de uma bela jogada de *marketing*. Na época do lançamento, uma outra linguagem, também recém-surgida, estava fazendo bastante sucesso: o [Java](https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)), da empresa Sun Microsystems. A intenção da Netscape era embarcar na popularidade do Java, mas, no fim das contas, acabou por causar uma grande confusão, levando muitos a acreditar que o JavaScript era baseado em Java. No entanto, **JavaScript e Java são linguagens totalmente diferentes**, tanto em finalidade quanto na forma de se programar e, ainda hoje, os mais desavisados pensam que se trata da mesma coisa por causa da semelhança do nome.
+
+A Microsoft, uma das gigantes da tecnologia já naquela época, não podia ficar de fora da onda da WWW. Em 1996, a empresa lançou o [Internet Explorer](https://pt.wikipedia.org/wiki/Internet_Explorer) 3.0 com sua própria "versão" da linguagem JavaScript, a qual denominou JScript. O JScript possuía várias extensões e diferenças em relação ao JavaScript original, fazendo com que *websites* feitos com ele só funcionassem corretamente no Internet Explorer.
+
+Diante desse fato, em novembro de 1996, a Netscape anunciou que havia submetido o JavaScript à [ECMA](https://www.ecma-international.org/) (*European Computer Manufacturers Association*, ou Associação Europeia de Fabricantes de Computadores) como candidata a padrão industrial. Com isso, a empresa abriu as especificações da linguagem para o público, como se quisesse dizer que "não tinha nada a esconder", ao contrário da concorrente. O trabalho que se seguiu resultou na versão padronizada chamada **ECMAScript** (ECMA-262), versão 1.0 (junho de 1997). O padrão foi evoluindo ao longo dos anos, sendo a versão mais recente a ES2020 (ECMAScript 2020), lançada em junho de 2020. Atualmente, o ECMAScript é considerado o padrão de JavaScript a que todo navegador deve dar suporte.
+
+Contudo, a chamada Primeira Guerra dos *Browsers* (~ 1995—2001) não demorou a começar. A Microsoft passou a fornecer seu navegador junto com o sistema operacional Windows, fazendo com que as pessoas não mais precisassem recorrer ao *download* do Netscape para ter um programa do tipo. Durante praticamente toda a primeira década do século, o Internet Explorer reinou absoluto na liderança do mercado de navegadores. Com a posição alcançada, a Microsoft ignorava o padrão ECMAScript, investindo em suas extensões proprietárias. Desenvolver para a Web tornou-se caótico, devido à falta de compatibilidade entre o JScript do Internet Explorer com o JavaScript padrão.
+
+A empresa Netscape fechou as portas em 2002, exaurida por uma longa batalha judicial contra a Microsoft. Dos escombros da Netscape surgiram dois projetos, que resultaram nos navegadores [Opera](https://www.opera.com/pt-br) e [Firefox](https://www.mozilla.org/pt-BR/firefox/), que existem até hoje. Embora fossem bons produtos e tivessem alcançado algum destaque, nenhum deles tinha força para competir com a toda poderosa Microsoft.
+
+Foi necessário que outra gigante da tecnologia entrasse no páreo para ameaçar a liderança da Microsoft e do Internet Explorer entre os navegadores, iniciando a Segunda Guerra dos *Browsers*. Em 2008, a Google lançou o [Google Chrome](https://www.google.com/intl/pt-BR/chrome/), com importantes diferenciais. Seu mecanismo de processamento de JavaScript, chamado V8, era extremamente rápido, fazendo com que as páginas Web carregassem bem mais depressa que no Internet Explorer. Além disso, o Chrome era baseado em um projeto de código aberto chamado [Chromium](https://www.chromium.org/chromium-projects), o que incentivou desenvolvedores a colaborar para o aperfeiçoamento do produto. Mais do que isso, a Google adotou como princípio a aderência aos chamados "padrões Web", dentre os quais se encontra o ECMAScript.
+
+Por volta de 2013, cinco anos após seu lançamento, o Google Chrome conquistou a liderança do mercado de navegadores. A Microsoft se viu obrigada a substituir o Internet Explorer por um novo navegador, o Edge, mais conforme aos padrões Web. 
+
+Antes, em 2010, aproveitando-se do fato de o Chrome ter seu código-fonte aberto, Ryan Dahl isolou o código do interpretador de JavaScript V8 e criou o [Node.js](https://nodejs.org/en/). Este *software* permite com que o JavaScript, uma linguagem de Internet projetada para ser executada dentro do navegador, possa ser executado também fora dele, tornando-a uma linguagem de propósito geral.
+
+A aderência do Google aos padrões Web, a derrocada do Internet Explorer e seu JScript não-padrão e a popularidade do Node.js levaram a um impulsionamento do desenvolvimento da linguagem JavaScript, que vem ganhando uma nova versão por ano desde 2015, quando foi lançada a versão ES6.
+
+A versão ES6 representou um marco de modernização na linguagem, e as versões subsequentes prosseguiram com a adição de funcionalidades. **Esta apostila tem como um de seus objetivos ensinar o JavaScript moderno**, abrangendo as principais características introduzidas desde o ES6, sem deixar de mencionar as formas originais, quando existirem.
+
+## Características da linguagem JavaScript
+
+Dentre os principais atributos da linguagem, podemos destacar:
+
+* ela é **interpretada**, ou seja cada linha de código é transformada em linguagem de máquina à medida que vai sendo executada pelo navegador. Existe um outro tipo de linguagem, as compiladas, em que todo o código de um programa é transformado em linguagem de máquina para só então poder ser executado.
+* ela é **imperativa**: você deve fornecer instruções claras de como conseguir o que quer, assim como em Python, VBA e C, entre outras linguagens. Já nas linguagens do tipo declarativo, é necessário dizer apenas o que se quer, sem precisar indicar as instruções passo a passo.
+* ela é **estruturada**, possuindo estruturas de construção de blocos lógicos de código, como a grande maioria das linguagens de programação utilizadas na atualidade. Sua sintaxe (forma de escrever as instruções) assemelha-se à das linguagens C e PHP.
+* ela tem **tipagem dinâmica**: não é necessário indicar o tipo ao declarar uma variável, sendo ele determinado a partir do valor armazenado na variável. Como consequência, uma mesma variável pode inicialmente guardar um número e, mais tarde, ter seu valor trocado por uma *string*.
+
+Caso você tenha tido contato com JavaScript antes, principalmente se há mais de cinco anos, pode se lembrar de que era costume colocar um `;` (ponto-e-vírgula) ao final de cada linha de código, como terminador de instruções. Saiba que esses **ponto-e-vírgulas finais são opcionais** em JavaScript (exceto em raríssimos casos), e, portanto, você não os verá nesta apostila.
+
 ## O JavaScript e as páginas Web
 
 As páginas Web são formadas pela combinação de três tecnologias:

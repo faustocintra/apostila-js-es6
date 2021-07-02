@@ -81,17 +81,17 @@ Para atribuir valor a uma variável, é usado o operador `=` em JavaScript. A @l
 ```{ #lst:atrib caption="Exemplos de atribuição de valores a variáveis" .js .number-lines}
     let nome, sobrenome, naturalidade, idade, altura, peso, casado
     let conjuge, ocupacao, filhos, nomeCompleto
-    nome = "Afrânio"                                    // string 
-    sobrenome = 'Azeredo'                               // string
-    naturalidade = `Morro Alto de Cima (MG)`            // string
-    idade = 44                                          // number
-    altura = 1.77                                       // number
-    peso = undefined                                    // undefined
-    casado = true                                       // boolean
-    conjuge = { nome: 'Jeruza', sobrenome: 'Jordão' }   // object
-    ocupacao = null                                     // object
-    filhos = ['Zózimo', 'Zuleica']                      // object
-    nomeCompleto = function(nome, sobrenome) {          // function
+    nome = "Afrânio" // string 
+    sobrenome = 'Azeredo' // string
+    naturalidade = `Morro Alto de Cima (MG)` // string
+    idade = 44 // number
+    altura = 1.77 // number
+    peso = undefined // undefined
+    casado = true // boolean
+    conjuge = { nome: 'Jeruza', sobrenome: 'Jordão' } // object
+    ocupacao = null // object
+    filhos = ['Zózimo', 'Zuleica'] // object
+    nomeCompleto = function(nome, sobrenome) {  // function
         return nome + " " + sobrenome
     }
 ```
