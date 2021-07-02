@@ -22,11 +22,11 @@ cd .build
 for f in *.md
 do
   cat "$f" >> tmp.md
-  printf "\n\n\\pagebreak\n\n" >> tmp.md  
+  printf '\n\n' >> tmp.md  
 done
 
 pandoc --pdf-engine=lualatex --highlight-style ../src/.config/dracula.theme --toc ./tmp.md -o ../dist/apostila-js.pdf
 
 cd ..
 
-echo "Bulding done."
+echo "Building done."
