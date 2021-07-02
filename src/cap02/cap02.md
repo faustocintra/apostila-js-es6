@@ -1,12 +1,3 @@
----
-mainfont: ARIALN.TTF
-mainfontoptions:
-- Path=/home/goncin/.fonts
-- BoldFont=ARIALNB.TTF
-- ItalicFont=ARIALNI.TTF
-- BoldItalicFont=ARIALNBI.TTF
----
-
 # VARIÁVEIS E TIPOS DE DADOS
 
 ## Declaração de variáveis

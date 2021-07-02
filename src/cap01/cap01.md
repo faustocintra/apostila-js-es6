@@ -10,7 +10,7 @@ As páginas Web são formadas pela combinação de três tecnologias:
 
 O JavaScript será o objeto do nosso estudo. No entanto, como iremos utilizá-lo **dentro** de uma página Web, precisamos saber e entender o básico de HTML.
 
-# A estrutura de uma página HTML
+## A estrutura de uma página HTML
 
 Uma página Web (também chamada de página HTML) é um arquivo de texto simples com extensão `.html` ou `.htm`. A listagem a seguir apresenta a estrutura básica de um arquivo HTML.
 
