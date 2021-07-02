@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting building, please wait..."
+echo "Building target PDF, please wait..."
 
 if [[ -d ./.build ]]; then
     rm -rf ./.build/* > /dev/null
@@ -25,7 +25,7 @@ do
   printf '\n\n' >> tmp.md  
 done
 
-pandoc --pdf-engine=lualatex --highlight-style ../src/.config/dracula.theme --toc ./tmp.md -o ../dist/apostila-js.pdf
+pandoc --pdf-engine=lualatex --highlight-style ../src/.config/dracula.theme --toc -V date=$(date +%d/%m/%Y%n) -F pandoc-crossref ./tmp.md -o ../dist/apostila-js.pdf
 
 cd ..
 
