@@ -134,4 +134,4 @@ O operador **`typeof`** nos diz qual o tipo de dados que a variável possui **no
 
 ________________
 
-Agora que sabemos como funcionam as variáveis e tipos de dados em JavaScript, precisamos saber o que fazer com eles. Bora aprender operadores aritméticos e lógicos?
+Agora que sabemos como funcionam as variáveis e tipos de dados em JavaScript, precisamos saber o que fazer com eles. Bora aprender operadores?

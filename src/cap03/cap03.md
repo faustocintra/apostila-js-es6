@@ -1,4 +1,4 @@
-# OPERADORES ARITMÉTICOS E LÓGICOS
+# OPERADORES
 
 ## Operadores aritméticos
 
@@ -53,3 +53,38 @@ O operador `+` em conjunto com algum valor **`undefined`** sempre retornará `Na
 | IMPORTANTE |
 |------------|
 | Comprender as duas funções do operador `+` (quando há e quando não há *strings* entre os operandos) é **FUNDAMENTAL** para evitar frustrações futuras ao tratar com valores informados pelo usuário. |
+
+### Operadores de atribuição composta
+
+Quem já estudou algoritmos sabe que uma das tarefas mais comuns em programação é a acumulação. Quando estamos somando uma lista de números por exemplo, iniciamos uma variável com o valor `0` e vamos **acumulando** o valor dos números, mais ou menos assim (@lst:acum):
+
+```{ #lst:acum caption="Exemplo de acumulação em variável" .js .number-lines}
+    // Somando os valores 10, 20, 30 e 40
+    let soma = 0
+    soma = soma + 10
+    soma = soma + 20
+    soma = soma + 30
+    soma = soma + 40
+    // O valor final da variável soma é 100
+```
+Observe que, no processo de acumulação, a variável `soma` aparece **antes** e **depois** do sinal de atribuição (`=`). Para casos assim, o JavaScript dispõe de uma série de **operadores de atribuição composta**, como o operador `+=`, que evitam a repetição do nome a variável. Usando-o, o código anterior fica assim (@lst:acum2):
+
+```{ #lst:acum2 caption="Acumulação usando o operador '+='" .js .number-lines}
+    // Somando os valores 10, 20, 30 e 40
+    let soma = 0
+    soma += 10
+    soma += 20
+    soma += 30
+    soma += 40
+    // O valor final da variável soma é 100
+```
+Veja alguns dos outros operadores de atribuição composta na @tbl:opattr:
+
+| Nome | Operador | Exemplo de uso | Significado |
+|------|----------|----------------|-------------|
+| Atribuição de subtração | `-=` | `x -= 10` | `x = x - 10` |
+| Atribuição de multiplicação | `*=` | `x *= 10` | `x = x * 10` |
+| Atribuição de divisão | `/=` | `x /= 10` | `x = x / 10` |
+| Atribuição de resto de divisão | `%=` | `x %= 10` | `x = x % 10` |
+| Atribuição de potenciação | `**=` | `x **= 10` | `x = x ** 10` |
+: Operadores de atribuição composta mais comuns {#tbl:opattr}

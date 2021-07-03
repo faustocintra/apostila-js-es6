@@ -49,6 +49,10 @@ As páginas Web são formadas pela combinação de três tecnologias:
 * **CSS** (*Cascading Style Sheets*, folhas de estilo em cascata): cuida da aparência da página, como cores, fontes e alinhamento dos elementos. Controla **como** o conteúdo é exibido na página.
 * **JavaScript**: é uma linguagem de **programação** que pode ser adicionada às páginas Web, conferindo-lhes interatividade para com o usuário. O JavaScript é capaz, por exemplo, de verificar em um formulário se o usuário digitou algo diferente do esperado ou de fazer coisas se movimentarem pela página.
 
+| IMPORTANTE |
+|------------|
+| Como o foco desta apostila é a linguagem JavaScript, veremos apenas o necessário de HTML e CSS, sem aprofundamento. Caso você queira aprender mais sobre essas duas tecnologias, recomendo o [Curso em Vídeo de HTML e CSS](https://www.cursoemvideo.com/course/html5-css3-modulo1/). |
+
 A linguagem JavaScript será o objeto do nosso estudo. No entanto, como iremos utilizá-la **dentro** de uma página Web, é necessário aprender o básico de HTML.
 
 ## A estrutura de uma página HTML

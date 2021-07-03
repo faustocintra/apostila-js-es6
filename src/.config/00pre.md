@@ -18,6 +18,8 @@ figureTitle: Figura
 figPrefix: Figura
 listingTitle: Listagem
 lstPrefix: Listagem
+tableTitle: Tabela
+tblPrefix: Tabela
 urlcolor: RedOrange
 papersize: a4
 linestretch: 1.2
