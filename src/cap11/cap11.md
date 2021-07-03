@@ -1,0 +1,1 @@
+# MANIPULAÇÃO DE *STRINGS*

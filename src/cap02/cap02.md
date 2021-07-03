@@ -19,6 +19,13 @@ Há três palavras-chave utilizadas para declarar variáveis em JavaScript:
 * **`var`**: é a palavra-chave originalmente disponível para a declaração de variáveis, desde a primeira versão do JavaScript. Seu uso apresenta alguns problemas, como a possibilidade de redeclarar uma variável já existente, o que pode induzir a erros de lógica. Evite utilizá-la, até compreender completamente as consequências de seu emprego.
 * **`const`**: em algumas situações, é necessário representar valores que não devem mais ser alterados posteriormente. São as chamadas **constantes**. Variáveis declaradas com **`const`** devem receber um valor quando declaradas e não aceitam que este valor seja modificado depois.
 
+Várias variáveis podem ser declaradas simultaneamente (@lst:var2):
+
+```{ #lst:var2 caption="Declarações múltiplas de variáveis".js .number-lines}
+let quantidade, precoUnitario, precoTotal
+let nome, email, telefone, celular
+```
+
 ### Nomeando variáveis
 
 Em JavaScript, nomes de variáveis devem começar com uma letra; os caracteres `$` e `_` também são aceitos primeira posição. Dígitos (`0` a `9`) podem ser utilizados a partir da segunda posição.
@@ -29,10 +36,6 @@ Você também não pode usar para nomear variáveis nenhuma das [palavras reserv
 
 Apesar de as especificações da linguagem JavaScript assim permitirem, não é recomendável declarar variáveis que contenham caracteres acentuados.
 
-| IMPORTANTE |
-|------------|
-| Os exemplos da @lst:var3 contêm comentários iniciados com `//`, chamados **comentários de linha**. Esta é uma das formas de se fazer comentários em JavaScript. |
-
 ```{ #lst:var3 caption="Exemplos de nomeação de variáveis" .js .number-lines}
 let x       // OK!
 let primeiroNome    // OK!
@@ -42,15 +45,6 @@ let _num    // OK, mas pouco usual
 let %resultado  // Caractere inicial INVÁLIDO
 let área    // OK, mas acentos não são recomendados
 ```
-### Declarações múltiplas
-
-Várias variáveis podem ser declaradas simultaneamente (@lst:var2):
-
-```{ #lst:var2 caption="Declarações múltiplas de variáveis".js .number-lines}
-let quantidade, precoUnitario, precoTotal
-let nome, email, telefone, celular
-```
-
 ### Convenções de nomeação de variáveis
 
 Quando muitos desenvolvedores trabalham num mesmo projeto, é comum que surja, mais cedo ou mais tarde, alguma discórdia sobre a forma de nomear as variáveis.
@@ -59,8 +53,8 @@ Por isso, as comunidades de cada linguagem acabam adotando convenções, que nã
 
 A convenção mais comum entre os desenvolvedores JavaScript é a seguinte:
 
-1. **Sempre** iniciar o nome das variáveis com uma letra **minúscula**; e
-2. Se o nome da variável for composto por mais de uma palavra, é utilizada **inicial maiúscula a partir da segunda** palavra.
+1. **Sempre iniciar** o nome das variáveis com uma **letra minúscula**; e
+2. Se o nome da variável for composto por **mais de uma palavra**, é utilizada **inicial maiúscula a partir da segunda** palavra.
 
 Observe os exemplos da @lst:var4:
 
@@ -76,9 +70,28 @@ Observe os exemplos da @lst:var4:
 
 ## Atribuindo valores a variáveis
 
-Para atribuir valor a uma variável, é usado o operador `=` em JavaScript. A @lst:atrib exemplifica os diferentes tipos de valores que podem ser atribuídos a variáveis na linguagem.
+Para atribuir valor a uma variável, é usado o operador `=` em JavaScript. A @lst:inic exemplifica os diferentes formas de atribuição.
 
-```{ #lst:atrib caption="Exemplos de atribuição de valores a variáveis" .js .number-lines}
+```{ #lst:inic caption="Exemplos de atribuição de valores a variáveis" .js .number-lines}
+let quantidade, valor
+
+quantidade = 7
+valor = 12.63
+
+// Podemos atribuir um valor à variável quando a declaramos
+let cargo = 'Gerente'
+
+/* Podemos, inclusive, fazer várias declarações/atribuições
+   de uma só vez */
+let marca = 'Volkswagen', modelo = 'Fusca', ano = 1969
+```
+A atribuição de valores pode ocorrer posteriormente à declaração da variável (linhas 3 e 4) ou acontecer ao mesmo tempo que esta (linhas 7 e 10). Neste último caso, dizemos que a variável, além de declarada, foi **inicializada**.
+
+## Tipos de dados
+
+Vamos analisar em detalhes os **tipos de dados** disponíveis na linguagem JavaScript. Usaremos, como referência e exemplo, a @lst:atrib.
+
+```{ #lst:atrib caption="Exemplos de tipos de dados" .js .number-lines}
     let nome, sobrenome, naturalidade, idade, altura, peso, casado
     let conjuge, ocupacao, filhos, nomeCompleto
     nome = "Afrânio" // string 
@@ -96,12 +109,6 @@ Para atribuir valor a uma variável, é usado o operador `=` em JavaScript. A @l
     }
 ```
 
-Agora, vamos ver em detalhes os **tipos de dados** disponíveis na linguagem JavaScript.
-
-## Tipos de dados
-
-Usaremos, como referência e exemplo, a @lst:atrib.
-
 * **string** (linhas 3 a 5): representa uma sequência de caracteres, ou seja, um texto. Em JavaScript, *strings* podem ser delimitadas com aspas duplas (`"`), aspas simples (`'`) ou acentos graves (<code>`</code>), muitas vezes chamados também de crases. Aspas simples e aspas duplas são totalmente equivalentes entre si, e a escolha por uma ou por outra acaba sendo decisão do programador. Já as *strings* delimitadas por acentos graves têm significado e funções especiais, que serão explicadas mais à frente.
 * **number** (linhas 6 e 7): ao contrário de outras linguagens de programação, o JavaScript não faz distinção entre números inteiros e números com parte fracionária (também chamados de números de ponto flutuante), colocando-os todos sob um mesmo tipo. Para separar a parte inteira da parte fracionária, quando esta exista, é sempre usado o ponto (`.`), embora, na língua portuguesa, usemos a vírgula para esse fim. Existem várias outras formas de representar valores numéricos:
   - valores hexadecimais (base 16) podem ser representados usando-se o prefixo `0x`. Por exemplo `0x1A` representa o valor hexadecimal `1A` (equivalente a 26 em decimal).
@@ -112,3 +119,19 @@ Usaremos, como referência e exemplo, a @lst:atrib.
 * **boolean** (linha 9): como indicado pelo próprio nome, representa valores booleanos. Os únicos valores possíveis são **`true`** (verdadeiro) e **`false`** (falso), sempre escritos totalmente em minúsculas.
 * **object** (linhas 10 a 12): é o tipo de dados mais versátil da linguagem, usado, normalmente, para armazenar vários valores em uma única variável. Os vetores (linha 12) e objetos em sentido estrito (linha 10) fazem parte desta categoria. **`null`** é um valor especial utilizado para representar um objeto inexistente.
 * **function** (linhas 13 a 15): em JavaScript, funções podem ser atribuídas a variáveis. Essa característica é importante para usos de nível intermediário e avançado da linguagem.
+
+### Descobrindo o tipo do valor de uma variável
+
+Em JavaScript, embora as variáveis não tenham um tipo determinado, os valores que elas abrigam têm. Para descobrir qual o tipo de dados do valor em um dado momento, usamos o operador **`typeof`**.
+
+Observe os testes feitos no console JavaScript mostrados na @fig:typeof.
+
+![Determinando o tipo do valor de algumas variáveis no console JavaScript](./img/cap02-01.png){#fig:typeof}
+
+> **OBSERVAÇÃO**: repare que as instruções que inicializam variáveis (começadas pela palavra **`let`**) retornaram **`undefined`**. Isso é normal, e significa que a instrução de inicialização da variável não retorna valor algum.
+
+O operador **`typeof`** nos diz qual o tipo de dados que a variável possui **no momento do teste**. Veja o que aconteceu com a variável `a`. No primeiro teste, obtemos `"number"`, quando o valor que ela tinha era `10`. Mais à frente, depois que mudamos o valor de `a` para `"Batata"`, o teste retornou o tipo do novo valor, `"string"`. Com isso, não resta dúvida: **o que possui tipo é o valor da variável, não a variável em si mesma**.
+
+________________
+
+Agora que sabemos como funcionam as variáveis e tipos de dados em JavaScript, precisamos saber o que fazer com eles. Bora aprender operadores aritméticos e lógicos?

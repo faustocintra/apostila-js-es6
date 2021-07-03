@@ -118,6 +118,32 @@ Portanto, agora você já sabe. Toda vez que formos usar JavaScript em uma pági
 2. Colocar dentro desse arquivo a estrutura básica de um arquivo HTML. Editores de código, como o [Visual Studio Code](https://code.visualstudio.com) ou o [Gitpod](https://gitpod.io) possuem recursos que geram automaticamente este código.
 3. Adicionar uma seção `<script></script>` na seção **head** e colocar as instruções JavaScript dentro dela.
 
+### Adicionando comentários
+
+Bons desenvolvedores não se preocupam apenas em escrever bem as instruções que serão executadas. Eles também cuidam da documentação, adicionando comentários que explicam os principais pontos, como forma de colaborar para que o código seja compreendido por outras pessoas (e até pelo autor, no futuro).
+
+Todas as linguagens possuem maneiras de inserir comentários no código. Em JavaScript, eles assumem duas formas:
+
+* **comentários de linha**: são iniciados com `//` (duas barras) e, como o próprio nome indica, terminam junto com o fim da linha onde foram colocados.
+* **comentários de bloco**: começam com `/*` (barra asterisco) e terminam com `*/` (asterisco barra). Tudo o que estiver entre eles é considerado comentário, que pode ter várias linhas.
+
+A @lst:comm exemplifica esses tipos de comentários. 
+
+```{ #lst:comm caption="Comentários em JavaScript" .js .number-lines }
+// Exibe uma mensagem em uma caixa de diálogo
+alert('Olá, como vão seus estudos?')  // Posso comentar aqui tb
+
+/* 
+    A linha abaixo exibe um texto na área <body>
+    do arquivo HTML
+*/
+document.write('Estou adorando aprender JavaScript!)
+```
+
+| IMPORTANTE |
+|------------|
+| A partir desta listagem, mostraremos apenas o código JavaScript. Você já sabe que ele precisa estar dentro das *tags* `<script></script>` do arquivo HTML, não é mesmo? ;) |
+
 ## Usando o console JavaScript
 
 Todos os navegadores mais utilizados atualmente tem uma parte "secreta", desconhecida da maioria dos usuários. Essa parte é chamada de Ferramentas de Desevolvedor e pode ser acessada ao pressionar a tecla `F12`. Será aberto um painel, no lado direito ou inferior da tela, conforme mostrado na @fig:cap01-03.
@@ -130,4 +156,6 @@ Na aba Console, é possível digitar instruções JavaScript, incluindo operaç�
 
 ![Resultado da execução de alguns comandos no console JavaScript do navegador Web](./img/cap01-04.png){#fig:cap01-04}
 
-No próximo capítulo, vamos aprender sobre variáveis e usaremos o console para fazer alguns testes.
+________________
+
+No próximo capítulo, vamos aprender sobre variáveis e tipos de dados, e usaremos o console para fazer alguns testes.

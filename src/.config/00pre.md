@@ -26,6 +26,7 @@ documentclass: report
 geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
 mainfont: IBM Plex Sans
 monofont: IBM Plex Mono
+monofontoptions: 'Scale=0.8'
 fontsize: 12pt
 header-includes: |
     \usepackage{fancyhdr}
