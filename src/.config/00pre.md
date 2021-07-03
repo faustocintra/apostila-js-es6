@@ -26,9 +26,9 @@ linestretch: 1.2
 lang: pt-BR
 documentclass: report
 geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
-mainfont: IBM Plex Sans
+mainfont: Source Sans Pro
 monofont: IBM Plex Mono
-monofontoptions: 'Scale=0.8'
+monofontoptions: 'Scale=0.9'
 fontsize: 12pt
 header-includes: |
     \usepackage{fancyhdr}
@@ -38,6 +38,9 @@ header-includes: |
     \fancyhead[R]{\thepage}
     \fancyfoot[L,C,R]{}
     \renewcommand{\footrulewidth}{0.4pt}
+output: 
+  pdf_document:
+    extra_dependencies: ["float"]
 ---
 
 \maketitle

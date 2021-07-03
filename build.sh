@@ -25,7 +25,9 @@ do
   printf '\n\n' >> tmp.md  
 done
 
-pandoc --pdf-engine=lualatex --highlight-style ../src/.config/dracula.theme --toc --toc-depth=2 -V date=$(date +%d/%m/%Y%n) -F pandoc-crossref ./tmp.md -o ../dist/apostila-js.pdf
+# pandoc --pdf-engine=lualatex --highlight-style ../src/.config/dracula.theme --toc --toc-depth=2 -V date=$(date +%d/%m/%Y%n) -F pandoc-crossref ./tmp.md -o "../dist/Apostila JavaScript - Prof. Fausto Cintra - $(date +%d-%m-%Y%n).pdf"
+
+pandoc --pdf-engine=xelatex --highlight-style ../src/.config/dracula.theme --toc --toc-depth=2 -V date=$(date +%d/%m/%Y%n) -F pandoc-crossref ./tmp.md -o "../dist/Apostila JavaScript - Prof. Fausto Cintra - $(date +%d-%m-%Y%n).pdf"
 
 cd ..
 

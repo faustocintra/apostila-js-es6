@@ -126,7 +126,7 @@ Em JavaScript, embora as variáveis não tenham um tipo determinado, os valores 
 
 Observe os testes feitos no console JavaScript mostrados na @fig:typeof.
 
-![Determinando o tipo do valor de algumas variáveis no console JavaScript](./img/cap02-01.png){#fig:typeof}
+![Determinando o tipo do valor de algumas variáveis no console JavaScript](./img/cap02-01.png){#fig:typeof width=12cm}
 
 > **OBSERVAÇÃO**: repare que as instruções que inicializam variáveis (começadas pela palavra **`let`**) retornaram **`undefined`**. Isso é normal, e significa que a instrução de inicialização da variável não retorna valor algum.
 

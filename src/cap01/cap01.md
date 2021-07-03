@@ -41,6 +41,8 @@ Dentre os principais atributos da linguagem, podemos destacar:
 
 Caso você tenha tido contato com JavaScript antes, principalmente se há mais de cinco anos, pode se lembrar de que era costume colocar um `;` (ponto-e-vírgula) ao final de cada linha de código, como terminador de instruções. Saiba que esses **ponto-e-vírgulas finais são opcionais** em JavaScript (exceto em raríssimos casos), e, portanto, você não os verá nesta apostila.
 
+Quanto à sintaxe, isto é a forma de escrever as instruções, JavaScript faz parte de uma grande "família" iniciada pela linguagem C e que tem, entre seus membros, as linguagens C++, C#, PHP. Portanto, se você já entrou em contato com alguma delas, verá algo similar em JavaScript.
+
 ## O JavaScript e as páginas Web
 
 As páginas Web são formadas pela combinação de três tecnologias:
@@ -76,20 +78,20 @@ Uma página Web (também chamada de página HTML) é um arquivo de texto simples
 |------------|
 | Os números que aparecem à esquerda do código **não** fazem parte dele. Servem apenas para que possamos nos referir a diferentes partes do código usando o número da linha. |
 
-Como podemos ver, o HTML é formado por elementos delimitados pelos caracteres `<` e `>`, os quais são chamados **tags**.
-
-Muitas *tags* vêm em pares, formando **seções**. Podemos observar, por exemplo, que a tag `<body>`, chamada *tag* de abertura, tem a correspondente *tag* de fechamento `</body>` (note a presença da `/` antes do nome da *tag*). 
-
-Agora, vamos analisar cada uma das partes desse código.
-
-* `<!DOCTYPE html>` (linha 1): essa *tag* serve para indicar ao navegador Web que irá exibir a página qual a versão da linguagem HTML está sendo usada. No caso, esse *doctype* indica que se trata da versão 5 do HTML, a mais recente.
-* Seção **html** (linhas 2 a 10): a maior parte do código da página fica nessa grande seção. Dentro dessa grande seção, temos as seções **head** e **body**.
-* Seção **head** (linhas 3 a 6): aqui colocadas *tags* de configuração da página, como a `<meta charset="UTF-8">` (linha 4), para garantir que os caracteres acentuados sejam exibidos corretamente. Os elementos dessa seção, normalmente, não têm um efeito visível para o usuário. Uma exceção é a *tag* `<title>` (linha 5), cujo conteúdo aparece na aba do navegador onde a página estiver sendo exibida.
-* Seção **body** (linhas 7 a 9): todo o conteúdo da página que será visível para o usuário é colocado nessa seção. No código de exemplo, temos um parágrafo (`<p>`, linha 8) contendo um texto a ser exibido.
-
 Quando o arquivo HTML contendo este código for exibido em um navegador Web, veremos um resultado semelhante ao da @fig:cap01-01:
 
 ![Exibição de uma página HTML](./img/cap01-01.png){#fig:cap01-01}
+
+Como podemos ver, o HTML é formado por elementos delimitados pelos caracteres `<` e `>`, os quais são chamados **tags**.
+
+Muitas *tags* vêm em pares, formando **seções**. Podemos observar, por exemplo, que a tag `<body>`, chamada *tag* de abertura, tem a correspondente *tag* de fechamento `</body>` (note a presença da `/` antes do nome da *tag*).
+
+Agora, vamos analisar cada uma das partes do código.
+
+* `<!DOCTYPE html>` (linha 1): essa *tag* serve para indicar ao navegador Web que irá exibir a página qual a versão da linguagem HTML está sendo usada. No caso, esse *doctype* indica que se trata da versão 5 do HTML, a mais recente.
+* Seção **html** (linhas 2 a 10): a maior parte do código da página fica nessa grande seção. Ali dentro, temos as seções **head** e **body**.
+* Seção **head** (linhas 3 a 6): aqui são colocadas *tags* de configuração da página, como a `<meta charset="UTF-8">` (linha 4), para garantir que os caracteres acentuados sejam exibidos corretamente. Os elementos dessa seção, normalmente, não têm um efeito visível para o usuário. Uma exceção é a *tag* `<title>` (linha 5), cujo conteúdo aparece na aba do navegador onde a página estiver sendo exibida.
+* Seção **body** (linhas 7 a 9): todo o conteúdo da página que será visível para o usuário é colocado nessa seção. No código de exemplo, temos um parágrafo (`<p>`, linha 8) contendo um texto a ser exibido.
 
 ## Adicionando JavaScript a uma página HTML
 
