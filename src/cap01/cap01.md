@@ -51,7 +51,7 @@ As páginas Web são formadas pela combinação de três tecnologias:
 * **CSS** (*Cascading Style Sheets*, folhas de estilo em cascata): cuida da aparência da página, como cores, fontes e alinhamento dos elementos. Controla **como** o conteúdo é exibido na página.
 * **JavaScript**: é uma linguagem de **programação** que pode ser adicionada às páginas Web, conferindo-lhes interatividade para com o usuário. O JavaScript é capaz, por exemplo, de verificar em um formulário se o usuário digitou algo diferente do esperado ou de fazer coisas se movimentarem pela página.
 
-| IMPORTANTE |
+| **IMPORTANTE** |
 |------------|
 | Como o foco desta apostila é a linguagem JavaScript, veremos apenas o necessário de HTML e CSS, sem aprofundamento. Caso você queira aprender mais sobre essas duas tecnologias, recomendo o [Curso em Vídeo de HTML e CSS](https://www.cursoemvideo.com/course/html5-css3-modulo1/). |
 
@@ -74,7 +74,7 @@ Uma página Web (também chamada de página HTML) é um arquivo de texto simples
 </html>
 ```
 
-| IMPORTANTE |
+| **IMPORTANTE** |
 |------------|
 | Os números que aparecem à esquerda do código **não** fazem parte dele. Servem apenas para que possamos nos referir a diferentes partes do código usando o número da linha. |
 
@@ -146,7 +146,7 @@ alert('Olá, como vão seus estudos?')  // Posso comentar aqui tb
 document.write('Estou adorando aprender JavaScript!)
 ```
 
-| IMPORTANTE |
+| **IMPORTANTE** |
 |------------|
 | A partir desta listagem, mostraremos apenas o código JavaScript. Você já sabe que ele precisa estar dentro das *tags* `<script></script>` do arquivo HTML, não é mesmo? ;) |
 
@@ -156,7 +156,7 @@ Todos os navegadores mais utilizados atualmente tem uma parte "secreta", desconh
 
 ![Navegador Web exibindo as Ferramentas de Desenvolvedor (no destaque). Note (1) a aba Console e (2) o menu de opções](./img/cap01-03.png){#fig:cap01-03}
 
-> **DICA**: usando o menu de opções (2), é possível mudar o posicionamento das Ferramentas de Desenvolvedor na tela.
+>> **DICA**: usando o menu de opções (2), é possível mudar o posicionamento das Ferramentas de Desenvolvedor na tela.
 
 Na aba Console, é possível digitar instruções JavaScript, incluindo operações aritméticas, e ver imediatamente seu resultado. Veja alguns exemplos na @fig:cap01-04.
 

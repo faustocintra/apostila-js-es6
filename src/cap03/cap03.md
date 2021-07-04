@@ -8,7 +8,7 @@ Convivemos com os operadores aritméticos das quatro operações básicas desde 
 
 ![Os quatro operadores aritméticos básicos em JavaScript](./img/cap03-01.png){#fig:aritm width=12cm}
 
-> **OBSERVAÇÃO**: ao contrário da maioria das linguagens de programação (e até da sua calculadora), JavaScript não retorna erro quando há uma tentativa de divisão por zero. Em vez disso, ele retorna `Infinity` caso o dividendo seja positivo ou `-Infinity` se o dividendo for negativo. Existem razões matemáticas para tanto. Há uma bela discussão sobre isso [aqui](https://pt.stackoverflow.com/questions/214335/porque-javascript-retorna-infinity-em-vez-de-erro-ao-dividir-por-0).
+>> **OBSERVAÇÃO**: ao contrário da maioria das linguagens de programação (e até da sua calculadora), JavaScript não retorna erro quando há uma tentativa de divisão por zero. Em vez disso, ele retorna `Infinity` caso o dividendo seja positivo ou `-Infinity` se o dividendo for negativo. Existem razões matemáticas para tanto. Há uma bela discussão sobre isso [aqui](https://pt.stackoverflow.com/questions/214335/porque-javascript-retorna-infinity-em-vez-de-erro-ao-dividir-por-0).
 
 Além deles, a linguagem conta com mais dois operadores aritméticos (@fig:mod-pot):
 
@@ -23,7 +23,7 @@ Os operadores aritméticos funcionam como esperado quando seus operandos são n�
 
 Vamos fazer alguns testes com o operador de multiplicação (@fig:mult-nan).
 
-![Operandos não numéricos](./img/cap03-03.png){#fig:mult-nan}
+![Operandos não numéricos](./img/cap03-03.png){#fig:mult-nan width=12cm}
 
 Sem dúvida, são resultados supreendentes. Vamos analisar caso a caso:
 
@@ -50,9 +50,9 @@ Primeiramente, precisamos aprender que o **operador `+`  tem duas funções** di
 
 O operador `+` em conjunto com algum valor **`undefined`** sempre retornará `NaN`, e é um caso à parte.
 
-| IMPORTANTE |
+| **IMPORTANTE** |
 |------------|
-| Comprender as duas funções do operador `+` (quando há e quando não há *strings* entre os operandos) é **FUNDAMENTAL** para evitar frustrações futuras ao tratar com valores informados pelo usuário. |
+| Comprender as duas funções do operador `+` (quando há e quando não há *strings* entre os operandos, ou seja, **concatenação** e **adição**, respectivamente) é **FUNDAMENTAL** para evitar frustrações futuras ao tratar com valores informados pelo usuário. |
 
 ## Operadores compostos de atribuição
 

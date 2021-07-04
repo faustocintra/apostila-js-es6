@@ -32,6 +32,8 @@ monofontoptions: 'Scale=0.9'
 fontsize: 12pt
 header-includes: |
     \usepackage{fancyhdr}
+    \setlength\parindent{30pt}
+    \usepackage{indentfirst}
     \pagestyle{fancy}
     \fancyhead[L]{APOSTILA JS (ES6+)}
     \fancyhead[C]{Prof. Fausto G. Cintra}

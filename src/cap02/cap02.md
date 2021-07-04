@@ -11,7 +11,7 @@ let x
 var preco
 const meuNome = 'Fausto'
 ```
-> **NOTE BEM**: para declarar uma variável em JavaScript, basta uma das palavras-chave reservadas (**`let`** ou **`var`**) seguida do nome da variável, nada mais. **`const`** exige também que um valor seja atribuído à variável no momento da declaração.
+>> **NOTE BEM**: para declarar uma variável em JavaScript, basta uma das palavras-chave reservadas (**`let`** ou **`var`**) seguida do nome da variável, nada mais. **`const`** exige também que um valor seja atribuído à variável no momento da declaração.
 
 Há três palavras-chave utilizadas para declarar variáveis em JavaScript:
 
@@ -66,7 +66,10 @@ Observe os exemplos da @lst:var4:
     // Três palavras, iniciais maúsculas a partir da segunda
     let areaTerrenoPadrao
 ```
-> **CURIOSIDADE**: esse tipo de convenção é chamado, em inglês, de *camel case* (*camel* significa "camelo"). O motivo é que as letras maúsculas no meio do nome das variáveis acabam se parecendo com as corcovas do animal.
+
+>> **CURIOSIDADE**: esse tipo de convenção é chamado, em inglês, de *camel case* (*camel* significa "camelo"). O motivo é que as letras maúsculas no meio do nome das variáveis acabam se parecendo com as corcovas do animal.
+
+
 
 ## Atribuindo valores a variáveis
 
@@ -128,7 +131,7 @@ Observe os testes feitos no console JavaScript mostrados na @fig:typeof.
 
 ![Determinando o tipo do valor de algumas variáveis no console JavaScript](./img/cap02-01.png){#fig:typeof width=12cm}
 
-> **OBSERVAÇÃO**: repare que as instruções que inicializam variáveis (começadas pela palavra **`let`**) retornaram **`undefined`**. Isso é normal, e significa que a instrução de inicialização da variável não retorna valor algum.
+>> **OBSERVAÇÃO**: repare que as instruções que inicializam variáveis (começadas pela palavra **`let`**) retornaram **`undefined`**. Isso é normal, e significa que a instrução de inicialização da variável não retorna valor algum.
 
 O operador **`typeof`** nos diz qual o tipo de dados que a variável possui **no momento do teste**. Veja o que aconteceu com a variável `a`. No primeiro teste, obtemos `"number"`, quando o valor que ela tinha era `10`. Mais à frente, depois que mudamos o valor de `a` para `"Batata"`, o teste retornou o tipo do novo valor, `"string"`. Com isso, não resta dúvida: **o que possui tipo é o valor da variável, não a variável em si mesma**.
 
