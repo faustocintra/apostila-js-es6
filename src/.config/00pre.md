@@ -39,7 +39,6 @@ header-includes: |
     \fancyhead[C]{Prof. Fausto G. Cintra}
     \fancyhead[R]{\thepage}
     \fancyfoot[L,C,R]{}
-    \renewcommand{\footrulewidth}{0.4pt}
 output: 
   pdf_document:
     extra_dependencies: ["float"]
