@@ -13,7 +13,7 @@ author: |
 description: yada yada
 version: 0.1
 toc-title: Sumário
-numbersections: true
+numbersections: True
 figureTitle: Figura
 figPrefix: Figura
 listingTitle: Listagem

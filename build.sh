@@ -10,22 +10,27 @@ fi
 
 if [[ ! -d ./.build/img ]]; then mkdir ./.build/img; fi
 
-if [[ -f ./dist/apostila-js.pdf ]]; then rm ./dist/apostila-js.pdf; fi
+if [[ -d ./dist ]]; then
+    rm -rf ./dist/* > /dev/null
+else 
+    mkdir ./dist
+fi
 
-find src/ -name "*.md" -exec cp {} ./.build \;
-find src/ -name "*.png" -exec cp {} ./.build/img \;
+cp ./src/.config/00pre.md ./.build/tmp.md
+printf '\n\n' >> ./.build/tmp.md
 
-cd .build
-
-#cat ./*.md > ./tmp.md
-
-for f in *.md
+for f in ./src/*.md
 do
-  cat "$f" >> tmp.md
-  printf '\n\n' >> tmp.md  
+  cat "$f" >> ./.build/tmp.md
+  printf '\n\n' >> ./.build/tmp.md  
 done
 
-pandoc --pdf-engine=lualatex --highlight-style ../src/.config/dracula.theme --toc --toc-depth=2 -V date=$(date +%d/%m/%Y%n) -F pandoc-crossref ./tmp.md -o "../dist/Apostila JavaScript - Prof. Fausto Cintra - $(date +%d-%m-%Y%n).pdf"
+printf '\n\n' >> ./.build/tmp.md
+cat ./src/.config/ZZpost.md >> ./.build/tmp.md
+
+cd src/
+
+pandoc --pdf-engine=lualatex --highlight-style ./.config/dracula.theme --toc --toc-depth=2 -V date=$(date +%d/%m/%Y%n) -F pandoc-crossref ../.build/tmp.md -o "../dist/Apostila JavaScript - Prof. Fausto Cintra - $(date +%d-%m-%Y%n).pdf"
 
 cd ..
 
