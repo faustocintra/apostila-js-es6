@@ -59,17 +59,15 @@ A convenção mais comum entre os desenvolvedores JavaScript é a seguinte:
 Observe os exemplos da @lst:var4:
 
 ```{ #lst:var4 caption="Uso da convenção 'camel case' na nomeação de variáveis" .js .number-lines}
-    // Uma palavra, inicial minúscula
-    let area
-    // Duas palavras, a segunda com inicial maiúscula
-    let areaTerreno
-    // Três palavras, iniciais maúsculas a partir da segunda
-    let areaTerrenoPadrao
+// Uma palavra, inicial minúscula
+let area
+// Duas palavras, a segunda com inicial maiúscula
+let areaTerreno
+// Três palavras, iniciais maúsculas a partir da segunda
+let areaTerrenoPadrao
 ```
 
 >> **CURIOSIDADE**: esse tipo de convenção é chamado, em inglês, de *camel case* (*camel* significa "camelo"). O motivo é que as letras maúsculas no meio do nome das variáveis acabam se parecendo com as corcovas do animal.
-
-
 
 ## Atribuindo valores a variáveis
 
@@ -95,21 +93,21 @@ A atribuição de valores pode ocorrer posteriormente à declaração da variáv
 Vamos analisar em detalhes os **tipos de dados** disponíveis na linguagem JavaScript. Usaremos, como referência e exemplo, a @lst:atrib.
 
 ```{ #lst:atrib caption="Exemplos de tipos de dados" .js .number-lines}
-    let nome, sobrenome, naturalidade, idade, altura, peso, casado
-    let conjuge, ocupacao, filhos, nomeCompleto
-    nome = "Afrânio" // string 
-    sobrenome = 'Azeredo' // string
-    naturalidade = `Morro Alto de Cima (MG)` // string
-    idade = 44 // number
-    altura = 1.77 // number
-    peso = undefined // undefined
-    casado = true // boolean
-    conjuge = { nome: 'Jeruza', sobrenome: 'Jordão' } // object
-    ocupacao = null // object
-    filhos = ['Zózimo', 'Zuleica'] // object
-    nomeCompleto = function(nome, sobrenome) {  // function
-        return nome + " " + sobrenome
-    }
+let nome, sobrenome, naturalidade, idade, altura, peso, casado
+let conjuge, ocupacao, filhos, nomeCompleto
+nome = "Afrânio" // string 
+sobrenome = 'Azeredo' // string
+naturalidade = `Morro Alto de Cima (MG)` // string
+idade = 44 // number
+altura = 1.77 // number
+peso = undefined // undefined
+casado = true // boolean
+conjuge = { nome: 'Jeruza', sobrenome: 'Jordão' } // object
+ocupacao = null // object
+filhos = ['Zózimo', 'Zuleica'] // object
+nomeCompleto = function(nome, sobrenome) {  // function
+    return nome + " " + sobrenome
+}
 ```
 
 * **string** (linhas 3 a 5): representa uma sequência de caracteres, ou seja, um texto. Em JavaScript, *strings* podem ser delimitadas com aspas duplas (`"`), aspas simples (`'`) ou acentos graves (<code>`</code>), muitas vezes chamados também de crases. Aspas simples e aspas duplas são totalmente equivalentes entre si, e a escolha por uma ou por outra acaba sendo decisão do programador. Já as *strings* delimitadas por acentos graves têm significado e funções especiais, que serão explicadas mais à frente.

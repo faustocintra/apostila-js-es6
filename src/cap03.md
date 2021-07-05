@@ -146,7 +146,7 @@ E por que isso?
 Você deve se recordar, quando estudamos os operadores aritméticos, de que o JavaScript tenta converter *strings* que contêm valores numéricos em números, no contexto de uma operação aritmética. Por causa disso, a linguagem considera isso como verdadeiro:
 
 ```{ .js}
-    3 == "3"    // true
+3 == "3"    // true
 ```
 
 Ou seja, não apenas em expressões aritméticas, mas também em expressões de comparação, a conversão ocorre. Por isso, JavaScript considera ambos os valores iguais.
@@ -154,14 +154,14 @@ Ou seja, não apenas em expressões aritméticas, mas também em expressões de 
 No entanto, nem sempre é esse o comportamento que desejamos. Muitas vezes, não queremos que *strings* e números com o mesmo "conteúdo" sejam considerados iguais. Nesses casos, devemos usar o **operador de igualdade restrita** para efetuar a verificação.
 
 ```{ .js}
-    3 === "3"    // false
+3 === "3"    // false
 ```
 
 O operador de igualdade estrita verifica não apenas os valores, mas também os **tipos** que estão sendo comparados, retornando **`true`** apenas quando ambos os lados são **absolutamente iguais**.
 
 ```{ .js}
-    "3" === "3"    // true
-    3 === 3    // true
+"3" === "3"    // true
+3 === 3    // true
 ```
 
 | **CUIDADO!** |
@@ -176,11 +176,11 @@ Obviamente, se temos dois operadores de igualdade, temos também dois operadores
 O mesmo princípio da conversão (ou não) de **strings** numéricas em números, para efeitos de comparação, também se aplica aos operadores de diferença (@lst:diff):
 
 ```{ #lst:diff caption="Exemplos de uso dos operadores de diferença" .js .number-lines}
-    3 != "3"        // false
-    3 !== "3"       // true
-    3 != 4          // true
-    3 != "4"        // true
-    3 !== 4         // true
+3 != "3"        // false
+3 !== "3"       // true
+3 != 4          // true
+3 != "4"        // true
+3 !== 4         // true
 ```
 
 Note que, para o operador de diferença comum (`!=`) dois valores que têm o mesmo conteúdo, mas tipos diferentes (número e *string*), não são diferentes entre si (linha 1).
@@ -190,7 +190,7 @@ Note que, para o operador de diferença comum (`!=`) dois valores que têm o mes
 Observe a seguinte expressão aritmética:
 
 ```{ .js}
-   3 + 6 * 4
+3 + 6 * 4
 ```
 
 Qual o resultado? 36? 27?
@@ -200,14 +200,14 @@ Aprendemos no Ensino Fundamental que as operações de multiplicação e divisã
 Dizemos que os operadores de multiplicação e divisão têm **precedência** sobre os operadores de adição e subtração. Caso quiséssemos que a soma fosse resolvida primeiro, deveríamos usar parênteses:
 
 ```{ .js}
-   (3 + 6) * 4
+(3 + 6) * 4
 ```
 
 A questão da precedência de operadores surge também com os operadores lógicos. Qual seria, por exemplo, o resultado da expressão a seguir?
 
 ```{ .js}
-   let a = true, b = true, c = true
-   a || b && !c     // true
+let a = true, b = true, c = true
+a || b && !c     // true
 ```
 
 Dentre os operadores lógicos, o `!` tem a maior precedência. Portanto, ele será resolvido primeiro, invertendo o valor de `c` (de **`true`** para **`false`**).
@@ -219,8 +219,8 @@ Por fim, resolvemos o operador `||`. Analisando `a || false`, chegando a **`true
 Teríamos outro resultado caso o operador `||` fosse executado antes do `&&`:
 
 ```{ .js}
-   let a = true, b = true, c = true
-   (a || b) && !c   // false
+let a = true, b = true, c = true
+(a || b) && !c   // false
 ```
 
 Sim, eu sei que não é fácil decorar todas as ordens de precedência, e nem é necessário fazer isso. Basta consultar a tabela de precedência (@tbl:prec). Quanto mais acima o operador estiver, com maior antecedência ele será resolvido em uma expressão.

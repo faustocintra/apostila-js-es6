@@ -58,9 +58,9 @@ Este é o método de exibição de informações mais curioso, pois o seu destin
 Por isso, `console.log()` é muito usado para testes e depuração, como mostra o exemplo da @lst:conlog.
 
 ```{ #lst:conlog caption="Exemplo de uso de console.log()" .js .number-lines}
-    let a = 7, b = 3, c
-    c = 7 ** 3
-    console.log('Valor de c: ' + c)
+let a = 7, b = 3, c
+c = 7 ** 3
+console.log('Valor de c: ' + c)
 ```
 
 >> **NOTE BEM**: na linha 3, o sinal de `+` não representa uma soma, e sim uma concatenação, já que o primeiro operando é uma *string*.
@@ -103,10 +103,10 @@ Caso o usuário digite a infomação pedida e clique sobre o botão OK, a variá
 Experimente executar o código da @lst:prompt:
 
 ```{ #lst:prompt caption="Exemplo de uso combinado de prompt() e alert()" .js .number-lines}
-    let nome, mensagem
-    nome = console.log('Informe o seu nome:')
-    mensagem = 'Olá, ' + nome + '! Tudo bem?'
-    alert(mensagem)
+let nome, mensagem
+nome = console.log('Informe o seu nome:')
+mensagem = 'Olá, ' + nome + '! Tudo bem?'
+alert(mensagem)
 ```
 
 ### `confirm()`
