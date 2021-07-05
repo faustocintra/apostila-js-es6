@@ -113,12 +113,12 @@ Pois bem, o JavaScript possui operadores especializados para esses casos. Os ope
 
 ## Operadores lógicos
 
-Quem já estudou algoritmos e lógica de programação sabe que existem os operadores `E`, `OU` E `NÃO`, que agem sobre valores booleanos, com resultado também booleano.
+Quem já estudou algoritmos e lógica de programação sabe que existem os operadores `E`, `OU` e `NÃO`, que agem sobre valores booleanos, com resultado também booleano.
 
 Em JavaScript:
 
 * O operador lógico `E` é representado por **`&&`** (dois sinais de E comercial).
-* O operador lógico `OU` é representaado por **`||`** (duas barras verticais. Você encontra esse caractere na tecla à esquerda de `Z`, no seu teclado).
+* O operador lógico `OU` é representado por **`||`** (duas barras verticais. Você encontra esse caractere na tecla à esquerda de `Z`, no seu teclado).
 * O operador lógico `NÃO` é representado por **`!`** (um ponto de exclamação).
 
 A @fig:oplog exemplifica o uso dos operadores lógicos.

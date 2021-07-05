@@ -26,9 +26,9 @@ linestretch: 1.2
 lang: pt-BR
 documentclass: report
 geometry: "left=3cm,right=2cm,top=3cm,bottom=2cm"
-mainfont: Source Sans Pro
-monofont: IBM Plex Mono
-monofontoptions: 'Scale=0.9'
+mainfont: Rambla
+monofont: Iosevka Booklet
+# monofontoptions: 'Scale=0.9'
 fontsize: 12pt
 header-includes: |
     \usepackage{fancyhdr}
