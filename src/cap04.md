@@ -63,7 +63,7 @@ c = 7 ** 3
 console.log('Valor de c: ' + c)
 ```
 
->> **NOTE BEM**: na linha 3, o sinal de `+` não representa uma soma, e sim uma concatenação, já que o primeiro operando é uma *string*.
+> **NOTE BEM**: na linha 3, o sinal de `+` não representa uma soma, e sim uma concatenação, já que o primeiro operando é uma *string*.
 
 Confira o resultado na @fig:conlog.
 
@@ -92,7 +92,7 @@ O resultado desse código é semelhante ao retratado na @fig:prompt.
 
 Caso o usuário digite a infomação pedida e clique sobre o botão OK, a variável `nome` receberá o que for informado.
 
->> **OBSERVAÇÃO**: a função `prompt()` também pode ser escrita como `window.prompt()`.
+> **OBSERVAÇÃO**: a função `prompt()` também pode ser escrita como `window.prompt()`.
 
 `prompt()` é muito utilizada em um ciclo que envolve:
 
@@ -124,7 +124,7 @@ resposta = confirm('Deseja realmente continuar?')
 alert('Sua resposta foi: ' + resposta)
 ```
 
->> **OBSERVAÇÃO**: a função `confirm()` também pode ser escrita como `window.confirm()`.
+> **OBSERVAÇÃO**: a função `confirm()` também pode ser escrita como `window.confirm()`.
 
 Confira a aparência da caixa de diálogo do `confirm` na @fig:confirm.
 

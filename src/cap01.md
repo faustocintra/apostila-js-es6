@@ -156,7 +156,7 @@ Todos os navegadores mais utilizados atualmente tem uma parte "secreta", desconh
 
 ![Navegador Web exibindo as Ferramentas de Desenvolvedor (no destaque). Note (1) a aba Console e (2) o menu de opções](./img/cap01-03.png){#fig:cap01-03}
 
->> **DICA**: usando o menu de opções (2), é possível mudar o posicionamento das Ferramentas de Desenvolvedor na tela.
+> **DICA**: usando o menu de opções (2), é possível mudar o posicionamento das Ferramentas de Desenvolvedor na tela.
 
 Na aba Console, é possível digitar instruções JavaScript, incluindo operações aritméticas, e ver imediatamente seu resultado. Veja alguns exemplos na @fig:cap01-04.
 

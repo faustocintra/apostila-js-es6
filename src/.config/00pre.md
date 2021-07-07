@@ -10,7 +10,6 @@ subtitle: |
 author: |
         | Prof. Fausto G. Cintra
         | (<professor@faustocintra.com.br>)
-description: yada yada
 version: 0.1
 toc-title: Sumário
 numbersections: True
@@ -39,6 +38,12 @@ header-includes: |
     \fancyhead[C]{Prof. Fausto G. Cintra}
     \fancyhead[R]{\thepage}
     \fancyfoot[L,C,R]{}
+    
+    \usepackage{tcolorbox}
+    \newtcolorbox{myquote}{colback=gray!10!white, colframe=gray!30!white}
+    \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
+    
+
 output: 
   pdf_document:
     extra_dependencies: ["float"]

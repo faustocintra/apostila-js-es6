@@ -8,7 +8,7 @@ Convivemos com os operadores aritméticos das quatro operações básicas desde 
 
 ![Os quatro operadores aritméticos básicos em JavaScript](./img/cap03-01.png){#fig:aritm width=12cm}
 
->> **OBSERVAÇÃO**: ao contrário da maioria das linguagens de programação (e até da sua calculadora), JavaScript não retorna erro quando há uma tentativa de divisão por zero. Em vez disso, ele retorna `Infinity` caso o dividendo seja positivo ou `-Infinity` se o dividendo for negativo. Existem razões matemáticas para tanto. Há uma bela discussão sobre isso [aqui](https://pt.stackoverflow.com/questions/214335/porque-javascript-retorna-infinity-em-vez-de-erro-ao-dividir-por-0).
+> **OBSERVAÇÃO**: ao contrário da maioria das linguagens de programação (e até da sua calculadora), JavaScript não retorna erro quando há uma tentativa de divisão por zero. Em vez disso, ele retorna `Infinity` caso o dividendo seja positivo ou `-Infinity` se o dividendo for negativo. Existem razões matemáticas para tanto. Há uma bela discussão sobre isso [aqui](https://pt.stackoverflow.com/questions/214335/porque-javascript-retorna-infinity-em-vez-de-erro-ao-dividir-por-0).
 
 Além deles, a linguagem conta com mais dois operadores aritméticos (@fig:mod-pot):
 
