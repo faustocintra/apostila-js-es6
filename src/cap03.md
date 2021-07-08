@@ -95,6 +95,8 @@ Sem dúvida, os operadores compostos de atribuição são muito práticos e deix
 
 Pois bem, o JavaScript possui operadores especializados para esses casos. Os operadores de incremento (`++`) e decremento (`--`) são **operadores unários**, isto é, agem sobre um único operando. Repare, na @lst:incdec, que eles podem vir **antes** ou **depois** do seu operando?. [Há uma diferença entre esses dois usos](https://pt.stackoverflow.com/questions/15800/qual-a-diferen%C3%A7a-entre-pr%C3%A9-e-p%C3%B3s-incremento-em-javascript), que foge ao escopo desta apostila, mas, desde que esses operadores não estejam em uma expressão com outros operadores, o resultado prático é o mesmo.
 
+\clearpage
+
 ```{ #lst:incdec caption="Uso dos operadores de incremento e decremento" .js .number-lines}
     let x = 10, y = 20
 
