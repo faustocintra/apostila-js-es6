@@ -114,6 +114,10 @@ A @lst:js-html apresenta uma nova versão da mensagem "Olá, mundo!" mas, desta 
 </body>
 </html>
 ```
+| **IMPORTANTE** |
+|------------|
+| Para executar o código JavaScript dentro de uma página HTML, basta abri-la em um navegador Web. Recomendo usar o [Google Chrome](https://www.google.com/intl/pt-BR/chrome/) atualizado. |
+
 Observe com atenção as linhas 6 a 8. Aberto no navegador, um arquivo HTML com este código produz o seguinte resultado (@fig:cap01-02):
 
 ![Mensagem exibida usando JavaScript](./img/cap01-02.png){#fig:cap01-02}

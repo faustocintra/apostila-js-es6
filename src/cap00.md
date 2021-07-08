@@ -2,7 +2,9 @@
 
 JavaScript é uma das linguagens de programação mais difundidas atualmente, sendo imprescindível para aplicações voltadas à Internet. Por isso, todos quantos queiram se tornar desenvolvedores Web precisam dominá-la.
 
-Meu desejo, ao disponibilizar a você esta apostila, é ajudá-lo(a) a dar seus primeiros passos com a linguagem, com um conteúdo atualizado que abrange as principais modificações desde a versão ES6 (lançada em 2015). Este material é de nível básico; portanto, não cobre todos os recursos do JavaScript nem pretende ser a última palavra sobre o assunto. Sempre que algum tópico for secundário para quem está começando, ou exigir algum aprofundamento que saia da proposta do texto, há *links* para fontes externas.
+Meu desejo, ao disponibilizar a você esta apostila, é ajudá-lo(a) a dar seus primeiros passos com a linguagem, com um conteúdo atualizado que abrange as principais modificações desde a versão ES6 (lançada em 2015). Ela é o resultado de minha experiência de oito anos como professor de Ensino Superior, quatro deles ensinando JavaScript. Procurei trazer para o texto respostas às dúvidas mais comuns que alunos iniciantes na linguagem têm em sala de aula.
+
+Este material é de nível básico; portanto, não cobre todos os recursos do JavaScript nem pretende ser a última palavra sobre o assunto. Sempre que algum tópico for secundário para quem está começando, ou exigir algum aprofundamento que saia da proposta do texto, há *links* para fontes externas.
 
 ## A quem se destina esta apostila {.unlisted .unnumbered}
 
@@ -11,6 +13,8 @@ Para o melhor aproveitamento deste material, é desejável que o estudante já t
 * algoritmos e lógica de programação;
 * arquitetura e organização de computadores; e
 * uso de editores de código.
+
+E, claro, vontade de aprender. Programação é, sobretudo, prática. Não basta apenas **ler** o texto; é necessário colocar a mão na massa, codificar, testar e aprender com os erros.
 
 ## A quem NÃO se destina esta apostila {.unlisted .unnumbered}
 

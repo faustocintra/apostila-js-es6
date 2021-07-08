@@ -51,7 +51,7 @@ if(media >= 6) {
 
 Neste outro exemplo, a condição é uma expressão que se resolve em um valor booleano. Afinal, ou a média é maior ou igual a 6 (**`true`**) ou é menor que 6 (**`false`**). As instruções das linhas 6 e 7 serão executadas apenas no primeiro caso.
 
-### `if..else`
+### **`if..else`**
 
 Se você for observador(a), deve ter notado que tínhamos **duas** possibilidades em cada uma das listagens anteriores. E pode estar se perguntado: que mensagem o usuário verá se decidir não continuar ou se a média tiver ficado abaixo de 6?
 
@@ -159,7 +159,7 @@ else {
 > **ATENTE-SE-** ao uso de letras maiúsculas e minúsculas no nome da função `isNaN()`.
 
 
-### `if..else if..else`
+### **`if..else if..else`**
 
 Há casos em que apenas duas saídas em uma estrutura condicional não são suficientes. Suponha que precisemos converter a nota de um aluno, um valor numérico, em um conceito alfabético, segundo a @tbl:conceitos.
 
@@ -340,3 +340,137 @@ switch(diaNum) {
 Note a instrução **`break`** nas linhas 8, 11, 14, 17, 20, 23 e 26. Ela faz com que a execução, uma vez que a encontre, interrompa o processamento do **`switch..case`** e prossiga na primeira linha após a chave de fechamento da estrutura.
 
 O caso **`default`** não precisa de **`break`** porque, estando por último, o processamento da estrutura termina logo após, de qualquer forma.
+
+### **`case`**s vazios
+
+Imaginemos uma situação em que o usuário tenha que escolher entre três alternativas, digamos, A, B e C. Podemos usar `prompt()` para obter a escolha, mas esta pode ser informada tanto em letras maiúsculas quanto em letras minúsculas. Ou seja, tanto `A` quando `a` representam a mesma opção.
+
+Se tivéssemos usando uma sequência **`if..else if..else`**, deveríamos escrever algo como:
+```{.js}
+// (...)
+if(opcao === 'A' || opcao === 'a') {
+    // (...)
+}
+else if(opcao === 'B' || opcao === 'b') {
+// (...)
+}
+// (...)
+else {
+    // (...)
+}
+// (...)
+```
+
+A estrutura **`switch..case`** traz uma solução mais elegante quando mais de um valor leva à mesma ação. São os chamados **`case`**s vazios. Veja como funciona na @lst:switch4.
+
+```{ #lst:switch4 caption="A estrutura 'switch..case' com 'case's vazios" .js .number-lines}
+let opcao
+
+opcao = prompt('Qual sua escolha? (A, B ou C)')
+
+switch(opcao) {
+    case 'A':   // case vazio
+    case 'a':
+        alert('Você escolheu a opção A.')
+        break
+    case 'B':   // case vazio
+    case 'b':
+        alert('Você escolheu a opção B.')
+        break
+    case 'C':   // case vazio
+    case 'c':
+        alert('Você escolheu a opção C.')
+        break
+    default:
+        alert('ERRO: opção não reconhecida.')
+}
+```
+
+Observe os **`case`**s das linhas 6, 10 e 14. Não há nenhuma ação (nenhum `alert()`) associada a eles, **nem mesmo possuem um `break`**. Ainda assim, eles constituem pontos de entrada da execução na estrutura **`switch..case`**, prosseguindo a partir daí linha a linha até atingir a próxima instrução **`break`** ou o final da estrutura.
+
+Se o usuário, por exemplo, informar a opção `B` (maiúscula), a execução entrará no **`switch..case`** pela linha 10 e continuará até a linha 13, passando pelo `alert()` da opção B na linha 12.
+
+Enfim, os **`case`**s vazios constituem o motivo pelo qual o projeto da linguagem exige o **`break`** ao final de um **`case`** que contenha, efetivamente, uma ação. Essa é uma característica que JavaScript herdou da linguagem C, estando presente também em outras linguagens da família, como C++, C#, PHP e Java.
+
+### Limitação
+
+A estrutura **`switch..case`** é muito prática quando se trata de comparar o conteúdo de uma única variável contra vários valores diferentes. No entanto, a **única comparação possível** na estrutura **é a de igualdade**. Colocar operadores após a palavra **`case`** nem sempre é erro de sintaxe em JavaScript, mas é erro de lógica, porque o programa não se comportará como esperado. 
+
+Portanto, problemas como o da @lst:ifelif (conversão de nota em conceito) não podem ser resolvidos com **`switch..case`**.
+
+## O operador ternário
+
+Uma ocorrência bastante comum em programação é o resultado de uma condição determinar o valor de uma variável. Por exemplo:
+
+```{.js}
+let media, status
+
+// (...)
+
+if(media >= 6) {
+    status = 'APROVADO'
+}
+else {
+    status = 'REPROVADO'
+}
+```
+
+Ou, então, o texto de uma saída depender de uma condição:
+
+```{.js}
+let pais
+
+// (...)
+
+if(pais === 'Brasil') {
+    document.write('brasileiro(a)')
+}
+else {
+    document.write('estrangeiro(a)')
+}
+```
+
+Em ambas podemos detectar:
+
+1. **Uma situação com duas saídas**, uma para o caso de a condição ser verdadeira (**`if`**) e outra se ela for falsa (**`else`**).
+2. Os blocos associados tanto ao **`if`** quanto ao **`else`** têm, cada qual, **apenas uma linha de código**.
+
+Nessas ocasiões, podemos escrever o programa de forma mais sucinta usando o operador ternário, cuja sintaxe é a seguinte:
+
+```
+condição ? ação se verdadeiro : ação se falso
+```
+
+> O nome **operador ternário** deve-se ao fato de ser o único operador da linguagem que exige **três** operandos.
+
+Para usá-lo, devemos obedecer à sequência:
+
+1. Primeiramente, escrevemos a condição, a mesma que seria informada no bloco **`if`** (*1º operando*).
+2. Em seguida, colocamos o caractere **`?`** (ponto de interrogação), como se, de fato, estivéssemos fazendo uma pergunta baseada na condição.
+3. Logo em seguida, vem a ação ou valor que o operador assumirá caso a condição seja verdadeira (*2º operando*).
+4. Segue-se o caractere **`:`** (dois pontos), que serve como separador entre a parte "verdadeira" e a parte "falsa" do operador.
+5. Por fim, colocamos a ação ou valor assumido se a condição restar falsa (*3º operando*).
+
+Usando o operador ternário, poderíamos escrever os exemplos anteriores conforme mostram a @lst:opter1 e a @lst:opter2.
+
+```{ #lst:opter1 caption="Exemplo (1) de uso do operador ternário" .js .number-lines}
+let media, status
+
+// (...)
+
+status = media >= 6 ? 'APROVADO' : 'REPROVADO'
+```
+
+```{ #lst:opter2 caption="Exemplo (2) de uso do operador ternário" .js .number-lines}
+let media, status
+
+// (...)
+
+document.write(pais === 'Brasil' ? 'brasileiro(a) : 'estrangeiro(a)')
+```
+
+Bem menos código, não é mesmo? ;)
+
+____________
+
+Com as estruturas condicionais, temos agora um maior **controle** sobre nossos programas, e conseguimos também fazer coisas bastante úteis. Eu não quero ser **repetitivo**, mas seu controle sobre o código aumentará ainda mais no próximo capítulo. 
