@@ -30,6 +30,8 @@ monofont: Iosevka Booklet
 # monofontoptions: 'Scale=0.9'
 fontsize: 12pt
 header-includes: |
+    \usepackage{float}
+    \usepackage{listingsutf8}
     \usepackage{fancyhdr}
     \setlength\parindent{30pt}
     \usepackage{indentfirst}
@@ -40,13 +42,17 @@ header-includes: |
     \fancyfoot[L,C,R]{}
     
     \usepackage{tcolorbox}
-    \newtcolorbox{myquote}{colback=gray!10!white, colframe=gray!30!white}
+    \newtcolorbox{myquote}{colback=gray!5!white, colframe=gray!20!white}
     \renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
-    
 
-output: 
-  pdf_document:
-    extra_dependencies: ["float"]
+    \usepackage{fvextra}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+
+    \definecolor{bgcolor}{HTML}{fbe9e7}
+    \let\oldtexttt\texttt
+    \newcommand{\code}[1]{\begingroup\setlength{\fboxsep}{1pt}\colorbox{bgcolor}{\oldtexttt{\hspace*{2pt}\vphantom{A}#1\hspace*{2pt}}}\endgroup}
+    \renewcommand{\texttt}[1]{\code{\oldtexttt{#1}}}    
+
 ---
 
 \maketitle

@@ -20,7 +20,7 @@ Algumas observações:
 4. Depois do parêntese de fechamento da condição, segue-se uma chave de abertura (`{`). Ele indica o início do bloco de instruções que será executado **apenas se a condição for verdadeira**.
 5. Uma chave de fechamento (`}`) marca o final do bloco de instruções.
 
-> **OBSERVAÇÃO**: as chaves são opcionais quando há uma única linha de código atrelada à estrutura `if`,. No entanto, até que você esteja bem familiarizado(a) com a sintaxe do JavaScript, recomendo que você sempre use as chaves.
+> **OBSERVAÇÃO**: as chaves são opcionais quando há uma única linha de código atrelada à estrutura **`if`**. No entanto, até que você esteja bem familiarizado(a) com a sintaxe do JavaScript, recomendo que sempre use as chaves.
 
 Vejamos um exemplo prático na @lst:if.
 
@@ -99,9 +99,7 @@ else {
     document.write('Situação: REPROVADO')
 }
 ```
-_____
-
-## PROBLEMA REAL: conversão de tipos {.unnumbered}
+### PROBLEMA REAL: conversão de tipos {.unnumbered}
 
 Agora que já aprendemos a estrutura condicional básica, temos condições de resolver alguns problemas práticos. Tente executar o programa da @lst:typconv.
 
@@ -160,6 +158,185 @@ else {
 ```
 > **ATENTE-SE-** ao uso de letras maiúsculas e minúsculas no nome da função `isNaN()`.
 
-_____
 
 ### `if..else if..else`
+
+Há casos em que apenas duas saídas em uma estrutura condicional não são suficientes. Suponha que precisemos converter a nota de um aluno, um valor numérico, em um conceito alfabético, segundo a @tbl:conceitos.
+
+| Faixa de notas | Conceito |
+|:-:|:-:|
+| 9 a 10 | A |
+| 7 a 8,9 | B |
+| 5 a 6,9 | C |
+| 3 a 4,9 | D |
+| 0 a 2,9 | E |
+: Tabela de conversão entre notas e conceitos {#tbl:conceitos}
+
+Suponha, ainda, que é o usuário quem irá digitar a nota a ser convertida para conceito (usando `prompt()`), e, obviamente, ele tem a possibilidade de digitar algo que não é um valor numérico ou mesmo fora dos limites entre 0 e 10.
+
+Logo, temos nada menos do que seis possibilidades, uma para cada conceito e mais uma para o caso de nota inválida. Para lidar com essa situação, usamos a estrutura **`if..else if..else`**, como demonstra a @lst:ifelif.
+
+```{ #lst:ifelif caption="Exemplo de uso da estrutura condicional 'if..else if..else'" .js .number-lines}
+let nota, conceito
+
+/* Number() efetua conversão de string para números,
+   aceitando valores fracionários */
+nota = Number('Informe a nota (entre 0 e 10)')
+
+if(nota >= 9) {             // Possibilidade nº 1
+    conceito = 'A'
+}
+else if(nota >= 7) {        // Possibilidade nº 2
+    conceito = 'B'
+}
+else if(nota >= 5) {        // Possibilidade nº 3
+    conceito = 'C'
+}
+else if(nota >= 3) {        // Possibilidade nº 4
+    conceito = 'D'
+}
+else if(conceito >= 0) {    // Possibilidade nº 5
+    conceito = 'E'
+}
+// Nota não numérica ou fora da faixa entre 0 e 10
+else {                      // Possibilidade nº 6
+    alert('ERRO: nota inválida')
+}
+
+document.write('Conceito: ' + conceito)
+```
+\clearpage
+
+Vamos analisar os principais pontos desse programa.
+
+* Na linha 5, usamos a função `Number()` (note o `N` maiúsculo) para fazer a conversão do valor que usuário digitar no `prompt()` para número. Ela trabalha de modo semelhante à `parseInt()`, mas aceita valores fracionários, como é o caso das notas.
+
+> Existe também a função `parseFloat()`, que produz o mesmo efeito que `Number()`.
+
+* Nas linhas 10, 13, 16 e 19, encadeamos um **`else`** imediatamente a um novo **`if`**. Note que, ao contrário do que acontece em outras linguagens de programação, **`else if`** são **duas palavras separadas**.
+* A última possibilidade (linha 23) conta apenas com um **`else`**, recaindo sobre ela qualquer valor não manipulado pelas possibilidades anteriores.
+
+## A estrutura **`switch..case`**
+
+A estrutura **`if..else if..else`** nos oferece uma forma de lidar com várias possibilidades. Observe este outro programa, que recebe um número entre 1 e 7 e retorna o dia da semana correspondente (@lst:switch1).
+
+```{ #lst:switch1 caption="Outro exemplo de uso da estrutura condicional 'if..else if..else'" .js .number-lines}
+let diaNum
+
+diaNum = parseInt(prompt('Informe o dia da semana (entre 1 e 7):'))
+
+if(diaNum === 1) {
+    alert('domingo')
+}
+else if(diaNum === 2) {
+    alert('segunda-feira')
+}
+else if(diaNum === 3) {
+    alert('terça-feira')
+}
+else if(diaNum === 4) {
+    alert('quarta-feira')
+}
+else if(diaNum === 5) {
+    alert('quinta-feira')
+}
+else if(diaNum === 6) {
+    alert('sexta-feira')
+}
+else if(diaNum === 7) {
+    alert('sábado')
+}
+else {
+    alert('ERRO: dia inválido')
+}
+```
+
+Nesse programa, temos algumas características bastante peculiares. Vejamos:
+
+* **todos os testes feitos foram de igualdade**; e
+* **a mesma variável foi testada em todos os casos** (a variável `diaNum`).
+
+Ou seja, em cada **`if`** ou **`else if`**, escrevemos o nome da mesma variável e vamos testando-a contra diferentes valores.
+
+Uma outra de testar uma única variável contra uma série de valores diferentes é usando a estrutura **`switch..case`**. Uma primeira tentativa de uso dessa estrutura resultaria na @lst:switch2.
+
+```{ #lst:switch2 caption="A estrutura 'switch..case', ainda sem 'breaks'" .js .number-lines}
+let diaNum
+
+diaNum = parseInt(prompt('Informe o dia da semana (entre 1 e 7):'))
+
+switch(diaNum) {
+    case 1:
+        alert('domingo')
+    case 2:
+        alert('segunda-feira')
+    case 3:
+        alert('terça-feira')
+    case 4:
+        alert('quarta-feira')
+    case 5:
+        alert('quinta-feira')
+    case 6:
+        alert('sexta-feira')
+    case 7:
+        alert('sábado')
+    default:
+        alert('ERRO: dia inválido')
+}
+```
+
+\clearpage
+
+Observemos os detalhes.
+
+1. A estrutura **`switch..case`** inicia-se com a palavra **`switch`**, seguida do nome da variável a ser testada entre parênteses e uma chave de abertura (linha 5). Essa chave só será fechada no final da estrutura (no nosso programa, na linha 22).
+2. Há um **`case`** para cada valor a ser testado, seguido de dois pontos (linhas 6, 8, 10, 12, 14, 16 e 18).
+3. Por fim, temos o caso **`default`**, que funciona como o "else" do **`switch..case`**. Ou seja, se a execução não entrar em nenhum **`case`**, cairá ali.
+
+No entanto, ao executar esse programa como apresentado, veremos um resultado estranho. Se o usuário informar o número 4, por exemplo, verá não apenas a mensagem "quarta-feira", mas todas as que se seguem, inclusive a mensagem de erro do **`default`**.
+
+Fique tranquilo(a), você não fez nada de errado. Mas é preciso entender um pouco melhor como funciona a estrutura **`switch..case`**.
+
+Cada **`case`** é um ponto de entrada dentro da estrutura. Quando a execução encontra um **`case`** compatível, ela entra no **`switch..case`** naquele ponto e prossegue executando linha a linha até o término da estrutura. Pode paracer estranho, mas os projetistas da linguagem a conceberam para se comportar exatamente assim. E isso tem suas vantagens, como veremos mais adiante.
+
+Mas... como fazer com que a estrutura execute apenas o código associado ao **`case`** do valor informado?
+
+### **`break`**
+
+O que precisamos fazer é interromper o fluxo da execução uma vez que o código associado ao **`case`** tenha sido processado. Isso é feito colocando-se a palavra-chave **`break`** ao final de cada **`case`**, como mostrado na @lst:switch3.
+
+```{ #lst:switch3 caption="A estrutura 'switch..case', agora com 'breaks'" .js .number-lines}
+let diaNum
+
+diaNum = parseInt(prompt('Informe o dia da semana (entre 1 e 7):'))
+
+switch(diaNum) {
+    case 1:
+        alert('domingo')
+        break
+    case 2:
+        alert('segunda-feira')
+        break
+    case 3:
+        alert('terça-feira')
+        break
+    case 4:
+        alert('quarta-feira')
+        break
+    case 5:
+        alert('quinta-feira')
+        break
+    case 6:
+        alert('sexta-feira')
+        break
+    case 7:
+        alert('sábado')
+        break
+    default:
+        alert('ERRO: dia inválido')
+}
+```
+
+Note a instrução **`break`** nas linhas 8, 11, 14, 17, 20, 23 e 26. Ela faz com que a execução, uma vez que a encontre, interrompa o processamento do **`switch..case`** e prossiga na primeira linha após a chave de fechamento da estrutura.
+
+O caso **`default`** não precisa de **`break`** porque, estando por último, o processamento da estrutura termina logo após, de qualquer forma.
