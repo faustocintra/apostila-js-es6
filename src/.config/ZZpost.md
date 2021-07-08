@@ -3,7 +3,7 @@
 
 ## Licença {.unlisted .unnumbered}
 
-Esta obra está licenciada a você sob a licença [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR).
+Esta obra é disponibilizada a você sob a licença [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR).
 
 ## Créditos {.unlisted .unnumbered}
 
