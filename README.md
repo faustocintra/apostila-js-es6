@@ -1,5 +1,7 @@
 # Sobre
 
+![](.artwork/cover-readme.png)
+
 Apostila de JavaScript (EcmaScript 6+), nível básico, escrita e mantida pelo Prof. Fausto G. Cintra (<professor@faustocintra.com.br>).
 
 O documento é disponibilizado sob a licença [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR).
