@@ -466,7 +466,7 @@ let media, status
 
 // (...)
 
-document.write(pais === 'Brasil' ? 'brasileiro(a) : 'estrangeiro(a)')
+document.write(pais === 'Brasil' ? 'brasileiro(a)' : 'estrangeiro(a)')
 ```
 
 Bem menos código, não é mesmo? ;)
