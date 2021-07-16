@@ -12,7 +12,7 @@ if(condição) {
 }
 ```
 
-Algumas observações:
+Algumas notas:
 
 1. **`if`** é uma palavra reservada do JavaScript, e, como todas elas, é escrita **em minúsculas**.
 2. Os **parênteses** em torno da condição **são obrigatórios**.
@@ -99,6 +99,7 @@ else {
     document.write('Situação: REPROVADO')
 }
 ```
+
 ### PROBLEMA REAL: conversão de tipos {.unnumbered}
 
 Agora que já aprendemos a estrutura condicional básica, temos condições de resolver alguns problemas práticos. Tente executar o programa da @lst:typconv.
