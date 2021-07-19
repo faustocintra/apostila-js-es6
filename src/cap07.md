@@ -88,6 +88,8 @@ document.write(gerarTraco('_', 50))
 
 O exemplo da @lst:func3 serve também para ilustrar que funções não se aplicam apenas a tarefas de cálculos matemáticos. Nela, usamos uma função para gerar uma *string* de acordo com um padrão predeterminado pelos dois parâmetros. Note, na chamada de função da linha 15, que o valor `'*'` está sendo passado na primeira posição e, portanto, será recebido pela função no parâmetro `caract`. De forma semelhante, o valor `20`, passado na segunda posição, será recebido pela função no parâmetro `quant`. A conclusão a que chegamos é que **valores são passados a funções e recebidos nos parâmetros POR ORDEM**. Guarde essa informação, ela é importante.
 
+Veja, agora, uma função com três parâmetros (@lst:func4).
+
 ```{ #lst:func4 caption="Função com três parâmetros" .js .number-lines}
 /* Declaração de função que calcula a área de uma forma
    geométrica: retângulo (tipo 'R') ou triângulo (tipo 'T') */
@@ -116,3 +118,33 @@ let resArea = areaForma(infoBase, infoAltura, infoTipo)
 
 alert('A área da forma é ' + resArea)
 ```
+
+Nesse novo exemplo, não sabemos as informações que iremos passar à função no momento que escrevemos o código, pois é o usuário quem irá fornecê-las. Para tanto, temos primeiramente a declaração de três variáveis e seu respectivo preenchimento pelo usuário (linhas 19 a 21) e, depois, a chamada à função (linha 24) usando essas variáveis para passar os valores informados. Não é necessário que as variáveis tenham o mesmo nome dos parâmetros da função; afinal, já aprendemos que, na passagem de parâmetros, o que importa é a **ordem** dos valores.
+
+### Funções sem parâmetros
+
+É possível a existência de funções sem parâmetro, ou seja, funções que não necessitam de informações externas para fazer seu trabalho. Quando isso acontece, os parênteses que delimitam os parâmetros ficam vazios, mas não podem ser omitidos, seja na declaração, seja na chamada da função.
+
+Aliás, **os parênteses são a marca registrada das funções**, tanto que é comum fazer referência a elas pelo nome seguido de parênteses, como já fizemos várias vezes nesta apostila. Dessa forma, em vez de escrever "função `alert`" em um texto, escrevemos "função `alert()`", com os parênteses, para melhor diferenciá-la do nome de uma variável.
+
+Observe, na @lst:func5, a declaração de uma função sem parâmetros que retorna a hora atual do computador em formato de *string*. Para produzir o resultado, essa função faz chamadas a outras funções da linguagem JavaScript, que igualmente não levam parâmetros.
+
+```{ #lst:func5 caption="Exemplos de funções sem parâmetros" .js .number-lines}
+// Declaração de função: os parênteses dos parâmetros ficam vazios
+function agora() {    // Retorna a hora atual do computador
+    let hoje = new Date()
+    // Veja, na linha abaixo, outras três funções que também não recebem parâmetros
+    return hoje.getHours() + ':' + hoje.getMinutes() + ':' + hoje.getSeconds()
+}
+
+// Chamada à função: os parênteses da função se mantêm, mesmo vazios
+alert('A hora atual é ' + agora())
+```
+
+### Funções sem valor de retorno
+
+## Expressão de função
+
+## Onde declarar ou expressar funções no código
+
+## Variáveis e funções
