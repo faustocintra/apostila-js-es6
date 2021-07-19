@@ -34,12 +34,12 @@ A versão ES6 representou um marco de modernização na linguagem, e as versões
 
 Dentre os principais atributos da linguagem, podemos destacar:
 
-* ela é **interpretada**, ou seja cada linha de código é transformada em linguagem de máquina à medida que vai sendo executada pelo navegador. Existe um outro tipo de linguagem, as compiladas, em que todo o código de um programa é transformado em linguagem de máquina para só então poder ser executado.
+* ela é **interpretada**, ou seja cada linha de código é transformada em linguagem de máquina à medida que vai sendo executada pelo navegador. **Programas escritos em linguagens interpretadas são geralmente chamados de *scripts***. Existe um outro tipo de linguagem, as compiladas, em que todo o código de um programa é transformado em linguagem de máquina para só então poder ser executado.
 * ela é **imperativa**: você deve fornecer instruções claras de como conseguir o que quer, assim como em Python, VBA e C, entre outras linguagens. Já nas linguagens do tipo declarativo, é necessário dizer apenas o que se quer, sem precisar indicar as instruções passo a passo.
 * ela é **estruturada**, possuindo estruturas de construção de blocos lógicos de código, como a grande maioria das linguagens de programação utilizadas na atualidade. Sua sintaxe (forma de escrever as instruções) assemelha-se à das linguagens C e PHP.
 * ela tem **tipagem dinâmica**: não é necessário indicar o tipo ao declarar uma variável, sendo ele determinado a partir do valor armazenado na variável. Como consequência, uma mesma variável pode inicialmente guardar um número e, mais tarde, ter seu valor trocado por uma *string*.
 
-Caso você tenha tido contato com JavaScript antes, principalmente se há mais de cinco anos, pode se lembrar de que era costume colocar um `;` (ponto-e-vírgula) ao final de cada linha de código, como terminador de instruções. Saiba que esses **ponto-e-vírgulas finais são opcionais** em JavaScript (exceto em raríssimos casos), e, portanto, você não os verá nesta apostila.
+Caso você tenha tido contato com JavaScript antes, principalmente se há mais de cinco anos, pode se lembrar de que era costume colocar um `;` (ponto-e-vírgula) ao final de cada linha de código, como terminador de instruções. Saiba que esses **ponto-e-vírgulas finais são opcionais** em JavaScript (exceto em raríssimos casos), e, assim sendo, você não os verá nesta apostila.
 
 Quanto à sintaxe, isto é a forma de escrever as instruções, JavaScript faz parte de uma grande "família" iniciada pela linguagem C e que tem, entre seus membros, as linguagens C++, C#, PHP. Portanto, se você já entrou em contato com alguma delas, verá algo similar em JavaScript.
 

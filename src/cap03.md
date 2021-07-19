@@ -197,7 +197,7 @@ Observe a seguinte expressão aritmética:
 
 Qual o resultado? 36? 27?
 
-Aprendemos no Ensino Fundamental que as operações de multiplicação e divisão devem ser resolvidas antes das operações de adição e subtração. Portanto, precisamos resolver primeiro `6 * 4` e somar o resultado obtido por `3`. Portanto, a resposta correta é 27.
+Aprendemos no Ensino Fundamental que as operações de multiplicação e divisão devem ser resolvidas antes das operações de adição e subtração. Portanto, precisamos resolver primeiro `6 * 4` e somar o resultado obtido por `3`. Considerando isso, a resposta correta é 27.
 
 Dizemos que os operadores de multiplicação e divisão têm **precedência** sobre os operadores de adição e subtração. Caso quiséssemos que a soma fosse resolvida primeiro, deveríamos usar parênteses:
 
@@ -212,7 +212,7 @@ let a = true, b = true, c = true
 a || b && !c     // true
 ```
 
-Dentre os operadores lógicos, o `!` tem a maior precedência. Portanto, ele será resolvido primeiro, invertendo o valor de `c` (de **`true`** para **`false`**).
+Dentre os operadores lógicos, o `!` tem a maior precedência. Assim, ele será resolvido primeiro, invertendo o valor de `c` (de **`true`** para **`false`**).
 
 Em seguida na ordem de precedência, vem o operador `&&`. Devemos, portanto, resolver `b && c`. Com um valor verdadeiro e outro false, o resultado é **`false`**.
 

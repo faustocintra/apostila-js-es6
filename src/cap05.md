@@ -102,9 +102,9 @@ else {
 
 ### PROBLEMA REAL: conversão de tipos {.unnumbered}
 
-Agora que já aprendemos a estrutura condicional básica, temos condições de resolver alguns problemas práticos. Tente executar o programa da @lst:typconv.
+Agora que já aprendemos a estrutura condicional básica, temos condições de resolver alguns problemas práticos. Tente executar o *script* da @lst:typconv.
 
-```{ #lst:typconv caption="Programa simples para somar dois números inteiros" .js .number-lines}
+```{ #lst:typconv caption="'Script' simples para somar dois números inteiros" .js .number-lines}
 let num1, num2, soma
 
 num1 = prompt('Informe um número inteiro:')
@@ -124,7 +124,7 @@ São dois os motivos desse resultado:
 
 Portanto, precisamos converter as *strings* informadas em números antes de efetuar a soma. A forma mais comum de fazer essa conversão é usando a função `parseInt()`. Podemos usá-la em conjunto com a função `prompt()`, como mostrado na @lst:typconv2.
 
-```{ #lst:typconv2 caption="Programa simples para somar dois números inteiros, usando 'parseInt()'" .js .number-lines}
+```{ #lst:typconv2 caption="'Script' simples para somar dois números inteiros, usando 'parseInt()'" .js .number-lines}
 let num1, num2, soma
 
 // Note o uso da função parseInt() nas duas linhas a seguir
@@ -139,9 +139,9 @@ document.write('A soma dos dois inteiros informados é ' + soma)
 
 Essa nova versão funcionár corretamente **caso o usuário informe *strings* que possam ser convertidas para números**. Mas, o que acontecerá se o usuário informar, por exemplo, `batata` ou `gsfdjghfdljgh`? A função **`parseInt()` não conseguirá efetuar a conversão**, e **retornará o valor especial `NaN`** (*Not a Number*).
 
-Podemos detectar se a tentativa de conversão falhou usando uma outra função, `isNaN()`, que, como seu próprio nome indica, retorna **`true`** se o valor testado for igual a `NaN`. Com o uso dessa função e de uma estrutura condicional **`if..else`**, chegamos à versão definitiva e robusta do nosso programa de soma de números inteiros (@lst:typconv3).
+Podemos detectar se a tentativa de conversão falhou usando uma outra função, `isNaN()`, que, como seu próprio nome indica, retorna **`true`** se o valor testado for igual a `NaN`. Com o uso dessa função e de uma estrutura condicional **`if..else`**, chegamos à versão definitiva e robusta do nosso *script* de soma de números inteiros (@lst:typconv3).
 
-```{ #lst:typconv3 caption="Programa simples para somar dois números inteiros, usando 'parseInt()' e 'isNaN()'" .js .number-lines}
+```{ #lst:typconv3 caption="'Script' simples para somar dois números inteiros, usando 'parseInt()' e 'isNaN()'" .js .number-lines}
 let num1, num2, soma
 
 num1 = parseInt(prompt('Informe um número inteiro:'))
@@ -208,7 +208,7 @@ document.write('Conceito: ' + conceito)
 ```
 \clearpage
 
-Vamos analisar os principais pontos desse programa.
+Vamos analisar os principais pontos dessa listagem.
 
 * Na linha 5, usamos a função `Number()` (note o `N` maiúsculo) para fazer a conversão do valor que usuário digitar no `prompt()` para número. Ela trabalha de modo semelhante à `parseInt()`, mas aceita valores fracionários, como é o caso das notas.
 
@@ -219,7 +219,7 @@ Vamos analisar os principais pontos desse programa.
 
 ## A estrutura **`switch..case`**
 
-A estrutura **`if..else if..else`** nos oferece uma forma de lidar com várias possibilidades. Observe este outro programa, que recebe um número entre 1 e 7 e retorna o dia da semana correspondente (@lst:switch1).
+A estrutura **`if..else if..else`** nos oferece uma forma de lidar com várias possibilidades. Observe este outro *script*, que recebe um número entre 1 e 7 e retorna o dia da semana correspondente (@lst:switch1).
 
 ```{ #lst:switch1 caption="Outro exemplo de uso da estrutura condicional 'if..else if..else'" .js .number-lines}
 let diaNum
@@ -252,7 +252,7 @@ else {
 }
 ```
 
-Nesse programa, temos algumas características bastante peculiares. Vejamos:
+Nesse *script*, temos algumas características bastante peculiares. Vejamos:
 
 * **todos os testes feitos foram de igualdade**; e
 * **a mesma variável foi testada em todos os casos** (a variável `diaNum`).
@@ -290,11 +290,11 @@ switch(diaNum) {
 
 Observemos os detalhes.
 
-1. A estrutura **`switch..case`** inicia-se com a palavra **`switch`**, seguida do nome da variável a ser testada entre parênteses e uma chave de abertura (linha 5). Essa chave só será fechada no final da estrutura (no nosso programa, na linha 22).
+1. A estrutura **`switch..case`** inicia-se com a palavra **`switch`**, seguida do nome da variável a ser testada entre parênteses e uma chave de abertura (linha 5). Essa chave só será fechada no final da estrutura (no nosso *script*, na linha 22).
 2. Há um **`case`** para cada valor a ser testado, seguido de dois pontos (linhas 6, 8, 10, 12, 14, 16 e 18).
 3. Por fim, temos o caso **`default`**, que funciona como o "else" do **`switch..case`**. Ou seja, se a execução não entrar em nenhum **`case`**, cairá ali.
 
-No entanto, ao executar esse programa como apresentado, veremos um resultado estranho. Se o usuário informar o número 4, por exemplo, verá não apenas a mensagem "quarta-feira", mas todas as que se seguem, inclusive a mensagem de erro do **`default`**.
+No entanto, ao executar esse *script* como apresentado, veremos um resultado estranho. Se o usuário informar o número 4, por exemplo, verá não apenas a mensagem "quarta-feira", mas todas as que se seguem, inclusive a mensagem de erro do **`default`**.
 
 Fique tranquilo(a), você não fez nada de errado. Mas é preciso entender um pouco melhor como funciona a estrutura **`switch..case`**.
 
@@ -395,9 +395,9 @@ Enfim, os **`case`**s vazios constituem o motivo pelo qual o projeto da linguage
 
 ### Limitação
 
-A estrutura **`switch..case`** é muito prática quando se trata de comparar o conteúdo de uma única variável contra vários valores diferentes. No entanto, a **única comparação possível** na estrutura **é a de igualdade**. Colocar operadores após a palavra **`case`** nem sempre é erro de sintaxe em JavaScript, mas é erro de lógica, porque o programa não se comportará como esperado. 
+A estrutura **`switch..case`** é muito prática quando se trata de comparar o conteúdo de uma única variável contra vários valores diferentes. No entanto, a **única comparação possível** na estrutura **é a de igualdade**. Colocar operadores após a palavra **`case`** nem sempre é erro de sintaxe em JavaScript, mas é erro de lógica, porque o *script* não se comportará como esperado. 
 
-Portanto, problemas como o da @lst:ifelif (conversão de nota em conceito) não podem ser resolvidos com **`switch..case`**.
+Em vista disso, problemas como o da @lst:ifelif (conversão de nota em conceito) não podem ser resolvidos com **`switch..case`**.
 
 ## O operador ternário
 
@@ -436,7 +436,7 @@ Em ambas podemos detectar:
 1. **Uma situação com duas saídas**, uma para o caso de a condição ser verdadeira (**`if`**) e outra se ela for falsa (**`else`**).
 2. Os blocos associados tanto ao **`if`** quanto ao **`else`** têm, cada qual, **apenas uma linha de código**.
 
-Nessas ocasiões, podemos escrever o programa de forma mais sucinta usando o operador ternário, cuja sintaxe é a seguinte:
+Nessas ocasiões, podemos escrever o código de forma mais sucinta usando o operador ternário, cuja sintaxe é a seguinte:
 
 ```
 condição ? ação se verdadeiro : ação se falso

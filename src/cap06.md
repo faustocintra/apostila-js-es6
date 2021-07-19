@@ -68,7 +68,7 @@ while(x < 10) {
 
 Como vimos, o bloco de instruções associado a um *loop* **`while`** pode nem ser executado se a condição for falsa no começo. Esse comportamento se dá porque **`while`** verifica a condição logo no início, antes mesmo de executar qualquer instrução de seu bloco.
 
-Contudo, há situações em que desejamos que o bloco de instruções seja **executado pelo menos uma vez**. Imagine, por exemplo, que estamos implementando uma rotina na qual o usuário precise informar um valor obrigatoriamente numérico. Já tivemos situações assim nesta apostila, e o que fizemos foi informar uma mensagem de erro caso o valor informado não fosse numérico, encerrando o programa em seguida. Caso o usuário quisesse fazer uma nova tentativa, deveria recarregar a página para forçar a reexecução do código JavaScript.
+Contudo, há situações em que desejamos que o bloco de instruções seja **executado pelo menos uma vez**. Imagine, por exemplo, que estamos implementando uma rotina na qual o usuário precise informar um valor obrigatoriamente numérico. Já tivemos situações assim nesta apostila, e o que fizemos foi informar uma mensagem de erro caso o valor informado não fosse numérico, encerrando o *script* em seguida. Caso o usuário quisesse fazer uma nova tentativa, deveria recarregar a página para forçar a reexecução do código JavaScript.
 
 Com os laços de repetição, podemos fazer melhor. Podemos dar a oportunidade de o usuário informar o valor numérico **uma primeira vez** e, em caso de erro, oferecer novas chances até que ele acerte.
 
@@ -172,7 +172,7 @@ for(let i = 1; i <= quant; i++) {
 }
 ```
 
-Veja que, em vez de cravarmos um número fixo de repetições (do caractere `*`, no exemplo), é o valor da variável `quant`, informado pelo usuário, que determina esse limite. Note, ainda, como foram usados os *loops* **`do..while`** (linhas 3 a 5) e **`for`** em um mesmo programa, cada qual com sua finalidade inerente.
+Veja que, em vez de cravarmos um número fixo de repetições (do caractere `*`, no exemplo), é o valor da variável `quant`, informado pelo usuário, que determina esse limite. Note, ainda, como foram usados os *loops* **`do..while`** (linhas 3 a 5) e **`for`** em um mesmo *script*, cada qual com sua finalidade inerente.
 
 Por fim, vale comentar que, assim como o *loop* **`while`**, **`for`** também **não tem garantia de execução**, isto é, caso a condição seja falsa logo de início, nada acontecerá.
 
