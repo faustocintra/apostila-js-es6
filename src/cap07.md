@@ -143,7 +143,7 @@ alert('A hora atual é ' + agora())
 
 ### Funções sem valor de retorno
 
-Funções também podem ser usadas para isolar trechos de códigos que desempenham uma tarefa mas não retornam valor algum. Veja como isso ocorre nos exemplos da @lst:func6.
+Funções também podem ser usadas para isolar trechos de códigos que desempenham uma tarefa, geralmente repetitiva, mas não retornam valor algum. Veja como isso ocorre nos exemplos da @lst:func6.
 
 ```{ #lst:func6 caption="Exemplos de funções sem valor de retorno" .js .number-lines}
 // Desenha na página um traço do tamanho especificado
@@ -155,6 +155,7 @@ function desenharTraco(tamanho) {
 }
 
 desenharTraco(30)  // Desenha um traço com 30 hífens
+desenharTraco(50)  // Desenha um traço com 50 hífens
 
 function exibirSaudacao(horaDia) {
     if(horaDia < 12) {
@@ -174,8 +175,39 @@ function exibirSaudacao(horaDia) {
 exibirSaudacao(14)  // Exibirá 'Boa tarde!'
 ```
 
+Nessa listagem, temos declaradas duas funções sem valor de retorno, `desenharTraco()` (linha 1) e `exibirSaudacao()` (linha 12). Ambas se caracterizam pela ausência da palavra-chave **`return`** em seus blocos de código. Como consequência, ao efetuarmos chamadas a essas funções (linhas 9, 10 e 27), não faz sentido atribuir seu resultado a uma variável, já que não retornam (explicitamente) nenhum valor.
+
+> **OBSERVAÇÃO**: tecnicamente, uma função que não possui a palavra-chave **`return`** ainda assim retorna o valor **`undefined`**.
+
 ## Expressão de função
 
-## Onde declarar ou expressar funções no código
+Em JavaScript, funções podem ser atribuídas a variáveis e constituem um tipo de dados próprio. Com isso, é possível escrever uma **expressão de função** no lugar de uma declaração de função na maioria dos casos.
+
+Uma expressão de função nada mais é do que uma função com bloco de código atribuída a uma variável, como demonstra a @lst:func7.
+
+```{ #lst:func7 caption="Declaração de função vs. expressão de função" .js .number-lines}
+// Declaração de função
+function imc1(peso, altura) {
+    return peso / (altura ** 2)
+}
+
+// Expressão de função
+const imc2 = function(peso, altura) {
+   return peso / (altura ** 2) 
+}
+
+alert(imc1(80, 1.76))
+alert(imc2(80, 1.76))
+```
+
+A listagem mostra uma declaração de função (`imc1()`, linha 2) e, logo abaixo, uma expressão de função equivalente, `imc2()` (linha 7). Na expressão de função, esta é atribuída a uma **`const`**ante - uma "variável" que recebe um valor inicial que não pode mais ser modificado (para evitar erros de lógica). Note também que, na expressão de função, não há um **nome** entre a palavra-chave **`function`** e os parênteses dos parâmetros. Em outras palavras, a função em uma expressão de função é **anônima**.
+
+> **OBSERVAÇÃO**: sempre que, em seus programas, você tiver uma variável que recebe um valor inicial que não irá mais mudar, prefira declará-la com **`const`** em vez de **`let`**. Isso evita que você mude o valor dessa variável acidentalmente e previne o surgimento de *bugs* no código.
+
+A chamada a uma função que foi criada a partir de uma expressão de função é feita pelo nome da **`const`**ante que recebeu a função. Com isso, as chamadas de função das linhas 11 e 12 produzem o mesmo resultado.
+
+Expressões de função são muito usadas na programação profissional em JavaScript. Portanto, mesmo que você não entenda seu sentido ou utilidade neste momento, esforce-se em aprender o conceito para quando for necessário utilizá-lo no futuro.
+
+## Onde declarar ou colocar expressar funções no código
 
 ## Variáveis e funções

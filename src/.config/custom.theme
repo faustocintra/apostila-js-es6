@@ -12,35 +12,35 @@
             "underline": false
         },
         "Attribute": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "SpecialString": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "Annotation": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": true,
             "italic": false,
             "underline": false
         },
         "Function": {
-            "text-color": "#ff6e40",
+            "text-color": "#4e342e",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "String": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -68,7 +68,7 @@
             "underline": false
         },
         "BaseN": {
-            "text-color": "#7cb342",
+            "text-color": "#388e3c",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -89,7 +89,7 @@
             "underline": false
         },
         "BuiltIn": {
-            "text-color": "#ff6e40",
+            "text-color": "#4e342e",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -117,7 +117,7 @@
             "underline": false
         },
         "VerbatimString": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -145,7 +145,7 @@
             "underline": false
         },
         "Char": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": false,
             "italic": false,
@@ -159,14 +159,14 @@
             "underline": false
         },
         "Float": {
-            "text-color": "#7cb342",
+            "text-color": "#388e3c",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "Comment": {
-            "text-color": "#4db6ac",
+            "text-color": "#00897b",
             "background-color": null,
             "bold": false,
             "italic": true,
@@ -180,21 +180,21 @@
             "underline": false
         },
         "Constant": {
-            "text-color": "#7cb342",
+            "text-color": "#388e3c",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "SpecialChar": {
-            "text-color": "#0277bd",
+            "text-color": "#1565c0",
             "background-color": null,
             "bold": false,
             "italic": false,
             "underline": false
         },
         "DecVal": {
-            "text-color": "#7cb342",
+            "text-color": "#388e3c",
             "background-color": null,
             "bold": false,
             "italic": false,
