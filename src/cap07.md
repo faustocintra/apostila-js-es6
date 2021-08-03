@@ -143,6 +143,37 @@ alert('A hora atual é ' + agora())
 
 ### Funções sem valor de retorno
 
+Funções também podem ser usadas para isolar trechos de códigos que desempenham uma tarefa mas não retornam valor algum. Veja como isso ocorre nos exemplos da @lst:func6.
+
+```{ #lst:func6 caption="Exemplos de funções sem valor de retorno" .js .number-lines}
+// Desenha na página um traço do tamanho especificado
+function desenharTraco(tamanho) {
+    for(let i = 1; i <= tamanho; i++) {
+        document.write('-')
+    }
+    document.write('<br>')  // Quebra de linha
+}
+
+desenharTraco(30)  // Desenha um traço com 30 hífens
+
+function exibirSaudacao(horaDia) {
+    if(horaDia < 12) {
+        alert('Bom dia!')
+    }
+    else if(horaDia < 18) {
+        alert('Boa tarde!')
+    }
+    else if(horaDia <= 23) {
+        alert('Boa noite!')
+    }
+    else {
+        alert('ERRO: hora do dia inválida!)
+    }
+}
+
+exibirSaudacao(14)  // Exibirá 'Boa tarde!'
+```
+
 ## Expressão de função
 
 ## Onde declarar ou expressar funções no código
