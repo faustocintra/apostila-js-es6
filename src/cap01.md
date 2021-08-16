@@ -14,7 +14,7 @@ A escolha pelo nome JavaScript não foi por acaso, tratando-se, na verdade, de u
 
 A Microsoft, uma das gigantes da tecnologia já naquela época, não podia ficar de fora da onda da WWW. Em 1996, a empresa lançou o [Internet Explorer](https://pt.wikipedia.org/wiki/Internet_Explorer) 3.0 com sua própria "versão" da linguagem JavaScript, a qual denominou JScript. O JScript possuía várias extensões e diferenças em relação ao JavaScript original, fazendo com que *websites* feitos com ele só funcionassem corretamente no Internet Explorer.
 
-Diante desse fato, em novembro de 1996, a Netscape anunciou que havia submetido o JavaScript à [ECMA](https://www.ecma-international.org/) (*European Computer Manufacturers Association*, ou Associação Europeia de Fabricantes de Computadores) como candidata a padrão industrial. Com isso, a empresa abriu as especificações da linguagem para o público, como se quisesse dizer que "não tinha nada a esconder", ao contrário da concorrente. O trabalho que se seguiu resultou na versão padronizada chamada **ECMAScript** (ECMA-262), versão 1.0 (junho de 1997). O padrão foi evoluindo ao longo dos anos, sendo a versão mais recente a ES2020 (ECMAScript 2020), lançada em junho de 2020. Atualmente, o ECMAScript é considerado o padrão de JavaScript a que todo navegador deve dar suporte.
+Diante desse fato, em novembro de 1996, a Netscape anunciou que havia submetido o JavaScript à [ECMA](https://www.ecma-international.org/) (*European Computer Manufacturers Association*, ou Associação Europeia de Fabricantes de Computadores) como candidata a padrão industrial. Com isso, a empresa abriu as especificações da linguagem para o público, como se quisesse dizer que "não tinha nada a esconder", ao contrário da concorrente. O trabalho que se seguiu resultou na versão padronizada chamada **ECMAScript** (ECMA-262), versão 1.0 (junho de 1997). O padrão foi evoluindo ao longo dos anos, sendo a versão mais recente a ES2021 (ECMAScript 2021 ou, ainda, edição 12), lançada em junho de 2021. Atualmente, o ECMAScript é considerado o padrão de JavaScript a que todo navegador deve dar suporte.
 
 Contudo, a chamada Primeira Guerra dos *Browsers* (~ 1995—2001) não demorou a começar. A Microsoft passou a fornecer seu navegador junto com o sistema operacional Windows, fazendo com que as pessoas não mais precisassem recorrer ao *download* do Netscape para ter um programa do tipo. Durante praticamente toda a primeira década do século, o Internet Explorer reinou absoluto na liderança do mercado de navegadores. Com a posição alcançada, a Microsoft ignorava o padrão ECMAScript, investindo em suas extensões proprietárias. Desenvolver para a Web tornou-se caótico, devido à falta de compatibilidade entre o JScript do Internet Explorer com o JavaScript padrão.
 
@@ -147,7 +147,7 @@ alert('Olá, como vão seus estudos?')  // Posso comentar aqui tb
     A linha abaixo exibe um texto na área <body>
     do arquivo HTML
 */
-document.write('Estou adorando aprender JavaScript!)
+document.write('Estou adorando aprender JavaScript!')
 ```
 
 | **IMPORTANTE** |
