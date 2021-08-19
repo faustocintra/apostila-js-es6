@@ -210,4 +210,49 @@ Expressões de função são muito usadas na programação profissional em JavaS
 
 ## Onde declarar ou colocar expressar funções no código
 
+Como vimos anteriormente, o trabalho com funções envolve duas etapas distintas:
+1. Declarar a função ou criar a expressão de função; e
+2. Efetuar chamada(s) à função.
+
+No código, **a declaração de função pode vir ANTES ou DEPOIS da(s) respectiva(s) chamadas**. Em outras palavras, as chamadas podem vir acima ou abaixo da declaração da função, indistintamente, como exemplificado pela @lst:func8.
+
+```{ #lst:func8 caption="Posicionamento de declarações e chamadas de função no código" .js .number-lines}
+// Chamada da função ANTES da declaração
+alert(fatorial(4))      // 24
+
+// Declaração da função
+function fatorial(n) {
+    let res = 1
+    for(let i = n; i > 1; i--) {
+        res *= i
+    }
+    return res
+}
+
+// Chamada da função DEPOIS da declaração
+alert(fatorial(5))      // 120
+```
+
+As chamadas de função efetuadas nas linhas 2 e 14 funcionarão normalmente, uma vez que o JavaScript organiza internamente o código e consegue encontrar a função no momento da chamada mesmo que a respectiva declaração só apareça posteriormente. Apesar disso, desenvolvedores profissionais têm o hábito de posicionar declarações de função **antes** das chamadas.
+
+No entanto, **chamadas a funções criadas com expressões de função só podem ser efetuadas POSTERIORMENTE**. Expressões de função nada mais são do que funções que foram atribuídas a uma variável ou constante e, portanto, seguem o comportamento destas. Uma variável ou constante passa a existir somente a partir do ponto em que é declarada, e isso se estende às expressões de função, como é possível observar na @lst:func9.
+
+```{ #lst:func9 caption="Posicionamento de expressões e chamadas de função no código" .js .number-lines}
+// Chamada da função ANTES da criação da expressão de função
+alert(fatorial(4))      // NÃO FUNCIONARÁ - a função ainda não existe!
+
+// Criação da expressão da função
+// A função passa a existir a partir deste ponto
+const fatorial = function(n) {
+    let res = 1
+    for(let i = n; i > 1; i--) {
+        res *= i
+    }
+    return res
+}
+
+// Chamada da função DEPOIS da criação da expressão de função
+alert(fatorial(5))      // Funcionará normalmente
+```
+
 ## Variáveis e funções

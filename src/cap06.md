@@ -151,7 +151,7 @@ O que fizemos nesse caso foi inicializar a variável `i` com o valor máximo pre
 Uma outra possibilidade é criar laços cujo incremento (ou decremento) ocorre em intervalos diferentes de 1. O exemplo da @lst:for3 exibe os números entre 0 e 100, contando de 5 em 5.
 
 ```{ #lst:for3 caption="Laço 'for' com incremento em intervalo diferente de 1" .js .number-lines}
-for(let i = 0; i <=100 1; i += 5) {
+for(let i = 0; i <= 100; i += 5) {
     document.write(i + '<br>')
 }
 ```
@@ -164,7 +164,7 @@ Outra situação: nem sempre sabemos, no momento da codificação, quantas itera
 let quant
 
 do {
-    num = parseInt(prompt('Informe a quantidade de asteriscos:'))
+    quant = parseInt(prompt('Informe a quantidade de asteriscos:'))
 } while(isNaN(quant))
 
 for(let i = 1; i <= quant; i++) {
